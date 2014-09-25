@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+
+    <types>
+        <type type="types/news-list" extend="QUI\News\NewsList" icon="icon-book">
+            <locale group="quiqqer/news" var="admin.types.news.list" />
+            <desc>
+                <locale group="quiqqer/intranet" var="admin.types.news.list.desc" />
+            </desc>
+        </type>
+
+        <type type="types/news-entry" extend="QUI\News\Entry" icon="icon-paste">
+            <locale group="quiqqer/news" var="admin.types.news.entry" />
+            <desc>
+                <locale group="quiqqer/intranet" var="admin.types.news.entry.desc" />
+            </desc>
+        </type>
+    </types>
+
+</site>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<locales>
+
+    <groups name="package/news" type="php">
+
+        <!-- site types -->
+        <locale name="admin.types.news.list">
+            <de><![CDATA[Neuigkeiten Liste]]></de>
+            <en><![CDATA[News list]]></en>
+        </locale>
+        <locale name="admin.types.news.list.desc">
+            <de><![CDATA[Neuigkeiten Liste]]></de>
+            <en><![CDATA[News list]]></en>
+        </locale>
+        <locale name="admin.types.news.entry">
+            <de><![CDATA[Neuigkeite]]></de>
+            <en><![CDATA[News]]></en>
+        </locale>
+        <locale name="admin.types.news.entry.desc">
+            <de><![CDATA[Neuigkeite]]></de>
+            <en><![CDATA[News]]></en>
+        </locale>
+
+
+        <!-- news/list -->
+        <locale name="list.news.by">
+            <de><![CDATA[von]]></de>
+            <en><![CDATA[by]]></en>
+        </locale>
+
+        <locale name="list.news.on">
+            <de><![CDATA[am]]></de>
+            <en><![CDATA[on]]></en>
+        </locale>
+
+        <locale name="list.more">
+            <de><![CDATA[mehr]]></de>
+            <en><![CDATA[more]]></en>
+        </locale>
+
+        <!-- news/entry -->
+        <locale name="entry.news.by">
+            <de><![CDATA[von]]></de>
+            <en><![CDATA[by]]></en>
+        </locale>
+
+        <locale name="entry.news.on">
+            <de><![CDATA[am]]></de>
+            <en><![CDATA[on]]></en>
+        </locale>
+
+        <locale name="entry.news.prev">
+            <de><![CDATA[voriger Beitrag]]></de>
+            <en><![CDATA[previous newspost]]></en>
+        </locale>
+        <locale name="entry.news.next">
+            <de><![CDATA[nächster Beitrag]]></de>
+            <en><![CDATA[next newspost]]></en>
+        </locale>
+
+        <!-- news sheet -->
+        <locale name="sheet.first.page">
+            <de><![CDATA[Erste Seite]]></de>
+            <en><![CDATA[First page]]></en>
+        </locale>
+        <locale name="sheet.last.page">
+            <de><![CDATA[Letzte Seite]]></de>
+            <en><![CDATA[Last page]]></en>
+        </locale>
+        <locale name="sheet.back">
+            <de><![CDATA[zurück]]></de>
+            <en><![CDATA[back]]></en>
+        </locale>
+        <locale name="sheet.next">
+            <de><![CDATA[vor]]></de>
+            <en><![CDATA[next]]></en>
+        </locale>
+        <locale name="sheet.mobile.option">
+            <de><![CDATA[Seite [from] eins [max]]]></de>
+            <en><![CDATA[page [from] of [max]]]></en>
+        </locale>
+
+    </groups>
+
+</locales>

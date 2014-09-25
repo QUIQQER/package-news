@@ -1,0 +1,63 @@
+
+<article class="news-entry grid-100 mobile-grid-100 grid-parent">
+
+    <section class="content-header grid-100 mobile-grid-100">
+        <header>
+            <h1>{$Site->getAttribute('title')}</h1>
+
+            <time>
+                {user id=$Site->getAttribute('c_user') var=User}
+                {t}package/news entry.news.by{/t}
+                <span class="news-entry-author">
+                    {if $User->getId() && $User->getAttribute('firstname')}
+                        {$User->getAttribute('firstname')}
+                    {else if $User->getId()}
+                        {$User->getname()}
+                    {/if}
+                </span>
+
+                {t}package/news entry.news.on{/t}
+                {if $Site->getAttribute('release_from') &&
+                    $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
+                    {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
+                {else}
+                    {$Site->getAttribute('c_date')|date_format:"%d.%m.%Y"}
+                {/if}
+            </time>
+        </header>
+
+        {if $Site->getAttribute('short')}
+        <div class="content-short">
+            {$Site->getAttribute('short')}
+        </div>
+        {/if}
+    </section>
+
+    {if $Site->getAttribute('content')}
+    <section class="news-entry-content content-body grid-100 mobile-grid-100">
+        {$Site->getAttribute('content')}
+    </section>
+    {/if}
+
+    {sibling site=$Site type="next" assign=NextSibling}
+    {sibling site=$Site type="prev" assign=PrevSibling}
+
+    <aside class="content-body">
+        {if $PrevSibling}
+        <a href="{url site=$PrevSibling}" class="news-entry-prev"
+           title="{$PrevSibling->getAttribute('title')|escape:"html"}"
+        >
+            {t}package/news entry.news.prev{/t}
+        </a>
+        {/if}
+
+        {if $NextSibling}
+        <a href="{url site=$NextSibling}" class="news-entry-next"
+           title="{$NextSibling->getAttribute('title')|escape:"html"}"
+        >
+            {t}package/news entry.news.next{/t}
+        </a>
+        {/if}
+    </aside>
+
+</article>
