@@ -7,6 +7,25 @@
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.list.desc" />
             </desc>
+
+            <!-- list settings -->
+            <settings>
+
+                <category name="news-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/news" var="quiqqer.news.settings.title" />
+                        </title>
+
+                        <input conf="quiqqer.news.max" type="number">
+                            <text>
+                                <locale group="quiqqer/news" var="quiqqer.settings.news.max" />
+                            </text>
+                        </input>
+                    </settings>
+                </category>
+
+            </settings>
         </type>
 
         <type type="types/news-entry" extend="QUI\News\Entry" icon="icon-file-text">
