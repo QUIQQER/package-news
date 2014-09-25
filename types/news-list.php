@@ -5,7 +5,7 @@
  */
 
 $start = 0;
-$max   = $Site->getAttribute( 'quiqqer.news.max' );
+$max   = $Site->getAttribute( 'quiqqer.settings.news.max' );
 
 if ( !$max ) {
     $max = 5;

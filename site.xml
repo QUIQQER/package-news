@@ -8,6 +8,11 @@
                 <locale group="quiqqer/intranet" var="admin.types.news.list.desc" />
             </desc>
 
+            <!-- extra attributes -->
+            <attributes>
+                <attribute>quiqqer.settings.news.max</attribute>
+            </attributes>
+
             <!-- list settings -->
             <settings>
 
@@ -17,7 +22,7 @@
                             <locale group="quiqqer/news" var="quiqqer.news.settings.title" />
                         </title>
 
-                        <input conf="quiqqer.news.max" type="number">
+                        <input conf="quiqqer.settings.news.max" type="number">
                             <text>
                                 <locale group="quiqqer/news" var="quiqqer.settings.news.max" />
                             </text>
