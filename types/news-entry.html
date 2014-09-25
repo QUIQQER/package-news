@@ -7,7 +7,7 @@
 
             <time>
                 {user id=$Site->getAttribute('c_user') var=User}
-                {t}package/news entry.news.by{/t}
+                {t}quiqqer/news entry.news.by{/t}
                 <span class="news-entry-author">
                     {if $User->getId() && $User->getAttribute('firstname')}
                         {$User->getAttribute('firstname')}
@@ -16,7 +16,7 @@
                     {/if}
                 </span>
 
-                {t}package/news entry.news.on{/t}
+                {t}quiqqer/news entry.news.on{/t}
                 {if $Site->getAttribute('release_from') &&
                     $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
                     {$Site->getAttribute('release_from')|date_format:"%d.%m.%Y"}
@@ -47,7 +47,7 @@
         <a href="{url site=$PrevSibling}" class="news-entry-prev"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
         >
-            {t}package/news entry.news.prev{/t}
+            {t}quiqqer/news entry.news.prev{/t}
         </a>
         {/if}
 
@@ -55,7 +55,7 @@
         <a href="{url site=$NextSibling}" class="news-entry-next"
            title="{$NextSibling->getAttribute('title')|escape:"html"}"
         >
-            {t}package/news entry.news.next{/t}
+            {t}quiqqer/news entry.news.next{/t}
         </a>
         {/if}
     </aside>

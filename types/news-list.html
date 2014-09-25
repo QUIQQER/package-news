@@ -34,7 +34,7 @@
 
         <p class="qui-news-list-entry-date">
             {user id=$Child->getAttribute('c_user') var=User}
-            {t}package/news list.news.by{/t}
+            {t}quiqqer/news list.news.by{/t}
             <span class="qui-news-list-entry-date-author">
                 {if $User->getId() && $User->getAttribute('firstname')}
                     {$User->getAttribute('firstname')}
@@ -43,7 +43,7 @@
                 {/if}
             </span>
 
-            {t}package/news list.news.on{/t}
+            {t}quiqqer/news list.news.on{/t}
             {if $Child->getAttribute('release_from') &&
                 $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
                 {$Child->getAttribute('release_from')|date_format:"%d.%m.%Y"}
@@ -71,7 +71,7 @@
             <div class="qui-news-list-entry-short grid-75 mobile-grid-100">
                 {$Child->getAttribute('short')}
                 <a href="{url site=$Child}">
-                    {locale group="package/news" value="list.more"}
+                    {locale group="quiqqer/news" value="list.more"}
                 </a>
             </div>
 

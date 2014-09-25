@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
-    <groups name="package/news" type="php">
+    <groups name="quiqqer/news" type="php">
 
         <!-- site types -->
         <locale name="admin.types.news.list">
