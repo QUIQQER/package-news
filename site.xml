@@ -19,12 +19,12 @@
                 <category name="news-list-settings">
                     <settings>
                         <title>
-                            <locale group="quiqqer/news" var="quiqqer.news.settings.title" />
+                            <locale group="quiqqer/news" var="quiqqer.news.list.settings.title" />
                         </title>
 
                         <input conf="quiqqer.settings.news.max" type="number">
                             <text>
-                                <locale group="quiqqer/news" var="quiqqer.settings.news.max" />
+                                <locale group="quiqqer/news" var="quiqqer.news.list.settings.max" />
                             </text>
                         </input>
                     </settings>

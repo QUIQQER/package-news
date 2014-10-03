@@ -23,6 +23,15 @@
 
 
         <!-- news/list -->
+        <locale name="quiqqer.news.list.settings.title">
+            <de><![CDATA[Neuigkeiten Listen Einstellungen]]></de>
+            <en><![CDATA[News list settings]]></en>
+        </locale>
+        <locale name="quiqqer.news.list.settings.max">
+            <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
+            <en><![CDATA[Number of news posts per page]]></en>
+        </locale>
+
         <locale name="list.news.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>
