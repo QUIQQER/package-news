@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
+    <groups name="quiqqer/news" datatype="php,js">
+        <locale name="package.title">
+            <de><![CDATA[QUIQQER - News (Neuigkeiten)]]></de>
+            <en><![CDATA[QUIQQER - News]]></en>
+        </locale>
+    </groups>
+
     <groups name="quiqqer/news" type="php">
 
         <!-- site types -->
@@ -20,7 +27,6 @@
             <de><![CDATA[Neuigkeite]]></de>
             <en><![CDATA[News]]></en>
         </locale>
-
 
         <!-- news/list -->
         <locale name="quiqqer.news.list.settings.title">
@@ -88,7 +94,6 @@
             <de><![CDATA[Seite [from] eins [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
-
     </groups>
 
 </locales>
