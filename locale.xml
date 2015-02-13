@@ -6,22 +6,31 @@
             <de><![CDATA[QUIQQER - News (Neuigkeiten)]]></de>
             <en><![CDATA[QUIQQER - News]]></en>
         </locale>
+        <locale name="package.description">
+            <de><![CDATA[
+                <p>Erstellen Sie mit dem „News“-Modul eine Unterseite in Ihrem Projekt, auf der Sie die neuesten Meldungen verfassen.</p>
+                <p>Fügen Sie dazu Ihrem Projekt den Seitentyp „News-Liste“ hinzu und verfassen sie eine Meldung mit dem Seitentyp „News-Eintrag“</p>
+            ]]></de>
+            <en><![CDATA[
+
+            ]]></en>
+        </locale>
     </groups>
 
     <groups name="quiqqer/news" type="php">
 
         <!-- site types -->
         <locale name="admin.types.news.list">
-            <de><![CDATA[Neuigkeiten Liste]]></de>
+            <de><![CDATA[News-Liste]]></de>
             <en><![CDATA[News list]]></en>
         </locale>
         <locale name="admin.types.news.list.desc">
-            <de><![CDATA[Neuigkeiten Liste]]></de>
+            <de><![CDATA[News-Liste]]></de>
             <en><![CDATA[News list]]></en>
         </locale>
         <locale name="admin.types.news.entry">
-            <de><![CDATA[Neuigkeite]]></de>
-            <en><![CDATA[News]]></en>
+            <de><![CDATA[News-Eintrag]]></de>
+            <en><![CDATA[News entry]]></en>
         </locale>
         <locale name="admin.types.news.entry.desc">
             <de><![CDATA[Neuigkeite]]></de>
