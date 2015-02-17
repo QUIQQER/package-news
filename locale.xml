@@ -6,7 +6,7 @@
             <de><![CDATA[QUIQQER - News (Neuigkeiten)]]></de>
             <en><![CDATA[QUIQQER - News]]></en>
         </locale>
-        <locale name="package.description">
+        <locale name="package.description" html="true">
             <de><![CDATA[
                 <p>Erstellen Sie mit dem „News“-Modul eine Unterseite in Ihrem Projekt, auf der Sie die neuesten Meldungen verfassen.</p>
                 <p>Fügen Sie dazu Ihrem Projekt den Seitentyp „News-Liste“ hinzu und verfassen sie eine Meldung mit dem Seitentyp „News-Eintrag“</p>
