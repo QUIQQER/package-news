@@ -3,7 +3,7 @@
 /**
  * News List
  */
-
+/*
 $start = 0;
 $max   = $Site->getAttribute( 'quiqqer.settings.news.max' );
 
@@ -39,4 +39,25 @@ $children = $Site->getChildren(array(
 $Engine->assign(array(
     'sheets'   => $sheets,
     'children' => $children
+));
+*/
+
+
+$ChildrenList = new QUI\Controls\ChildrenList(array(
+    'showContent' => false,
+    'showTime'    => true,
+    'showCreator' => true,
+
+    'Site'  => $Site,
+    'where' => array(
+        'type' => 'quiqqer/news:types/news-entry'
+    ),
+    'limit' => $Site->getAttribute( 'quiqqer.settings.news.max' ),
+
+    'itemtype'       => "http://schema.org/ItemList",
+    'child-itemtype' => "http://schema.org/NewsArticle"
+));
+
+$Engine->assign(array(
+    'ChildrenList' => $ChildrenList
 ));

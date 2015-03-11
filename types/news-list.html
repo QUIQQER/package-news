@@ -21,6 +21,9 @@
 
     <section class="content-template grid-100 mobile-grid-100">
 
+        {$ChildrenList->create()}
+
+        {*
         {control control="\QUI\Controls\Sheets" Site=$Site sheets=$sheets}
 
         {foreach from=$children item=Child}
@@ -94,5 +97,7 @@
         {/foreach}
 
         {control control="\QUI\Controls\Sheets" Site=$Site sheets=$sheets}
+        *}
+
     </section>
 </div>

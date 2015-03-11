@@ -53,7 +53,7 @@
 
     <aside class="content-body">
         {if $PrevSibling}
-        <a href="{url site=$PrevSibling}" class="news-entry-prev"
+        <a href="{url site=$PrevSibling}" class="news-entry-prev button"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
         >
             {t}quiqqer/news entry.news.prev{/t}
@@ -61,7 +61,7 @@
         {/if}
 
         {if $NextSibling}
-        <a href="{url site=$NextSibling}" class="news-entry-next"
+        <a href="{url site=$NextSibling}" class="news-entry-next button"
            title="{$NextSibling->getAttribute('title')|escape:"html"}"
         >
             {t}quiqqer/news entry.news.next{/t}
