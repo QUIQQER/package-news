@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
 
-    <groups name="package/news" type="php">
+    <groups name="quiqqer/news" datatype="php,js">
+        <locale name="package.title">
+            <de><![CDATA[QUIQQER - News (Neuigkeiten)]]></de>
+            <en><![CDATA[QUIQQER - News]]></en>
+        </locale>
+        <locale name="package.description" html="true">
+            <de><![CDATA[
+                <p>Erstellen Sie mit dem „News“-Modul eine Unterseite in Ihrem Projekt, auf der Sie die neuesten Meldungen verfassen.</p>
+                <p>Fügen Sie dazu Ihrem Projekt den Seitentyp „News-Liste“ hinzu und verfassen sie eine Meldung mit dem Seitentyp „News-Eintrag“</p>
+            ]]></de>
+            <en><![CDATA[
+
+            ]]></en>
+        </locale>
+    </groups>
+
+    <groups name="quiqqer/news" type="php">
 
         <!-- site types -->
         <locale name="admin.types.news.list">
-            <de><![CDATA[Neuigkeiten Liste]]></de>
+            <de><![CDATA[News-Liste]]></de>
             <en><![CDATA[News list]]></en>
         </locale>
         <locale name="admin.types.news.list.desc">
-            <de><![CDATA[Neuigkeiten Liste]]></de>
+            <de><![CDATA[News-Liste]]></de>
             <en><![CDATA[News list]]></en>
         </locale>
         <locale name="admin.types.news.entry">
-            <de><![CDATA[Neuigkeite]]></de>
-            <en><![CDATA[News]]></en>
+            <de><![CDATA[News-Eintrag]]></de>
+            <en><![CDATA[News entry]]></en>
         </locale>
         <locale name="admin.types.news.entry.desc">
             <de><![CDATA[Neuigkeite]]></de>
             <en><![CDATA[News]]></en>
         </locale>
 
-
         <!-- news/list -->
+        <locale name="quiqqer.news.list.settings.title">
+            <de><![CDATA[Neuigkeiten Listen Einstellungen]]></de>
+            <en><![CDATA[News list settings]]></en>
+        </locale>
+        <locale name="quiqqer.news.list.settings.max">
+            <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
+            <en><![CDATA[Number of news posts per page]]></en>
+        </locale>
+
         <locale name="list.news.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>
@@ -79,7 +103,6 @@
             <de><![CDATA[Seite [from] eins [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
-
     </groups>
 
 </locales>
