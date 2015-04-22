@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <locales>
-
     <groups name="quiqqer/news" datatype="php,js">
         <locale name="package.title">
             <de><![CDATA[QUIQQER - News (Neuigkeiten)]]></de>
             <en><![CDATA[QUIQQER - News]]></en>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[
-                <p>Erstellen Sie mit dem „News“-Modul eine Unterseite in Ihrem Projekt, auf der Sie die neuesten Meldungen verfassen.</p>
-                <p>Fügen Sie dazu Ihrem Projekt den Seitentyp „News-Liste“ hinzu und verfassen sie eine Meldung mit dem Seitentyp „News-Eintrag“</p>
-            ]]></de>
-            <en><![CDATA[
+            <de><![CDATA[<p>Erstellen Sie mit dem &bdquo;News&ldquo;-Modul eine Unterseite in Ihrem Projekt, auf der Sie die neuesten Meldungen verfassen.</p>
 
-            ]]></en>
+<p>F&uuml;gen Sie dazu Ihrem Projekt den Seitentyp &bdquo;Newsliste&ldquo; hinzu und verfassen sie eine Meldung mit dem Seitentyp &bdquo;News-Eintrag&ldquo;</p>]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqer/news:types/news-entry.title">
+            <de><![CDATA[QUIQQER - News-Eintrag]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqer/news:types/news-list.description">
+            <de><![CDATA[Legen Sie eine Newsliste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+        <locale name="quiqqer/news:types/news-list.title">
+            <de><![CDATA[QUIQQER - Newsliste ]]></de>
+            <en><![CDATA[]]></en>
         </locale>
     </groups>
-
-    <groups name="quiqqer/news" type="php">
-
-        <!-- site types -->
+    <groups name="quiqqer/news" datatype="php">
         <locale name="admin.types.news.list">
-            <de><![CDATA[News-Liste]]></de>
+            <de><![CDATA[Newsliste]]></de>
             <en><![CDATA[News list]]></en>
         </locale>
         <locale name="admin.types.news.list.desc">
-            <de><![CDATA[News-Liste]]></de>
+            <de><![CDATA[Newsliste]]></de>
             <en><![CDATA[News list]]></en>
         </locale>
         <locale name="admin.types.news.entry">
@@ -33,46 +38,37 @@
             <en><![CDATA[News entry]]></en>
         </locale>
         <locale name="admin.types.news.entry.desc">
-            <de><![CDATA[Neuigkeite]]></de>
+            <de><![CDATA[Neuigkeiten]]></de>
             <en><![CDATA[News]]></en>
         </locale>
-
-        <!-- news/list -->
         <locale name="quiqqer.news.list.settings.title">
-            <de><![CDATA[Neuigkeiten Listen Einstellungen]]></de>
+            <de><![CDATA[Neuigkeitenlisten-Einstellungen]]></de>
             <en><![CDATA[News list settings]]></en>
         </locale>
         <locale name="quiqqer.news.list.settings.max">
             <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
             <en><![CDATA[Number of news posts per page]]></en>
         </locale>
-
         <locale name="list.news.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>
         </locale>
-
         <locale name="list.news.on">
             <de><![CDATA[am]]></de>
             <en><![CDATA[on]]></en>
         </locale>
-
         <locale name="list.more">
             <de><![CDATA[mehr]]></de>
             <en><![CDATA[more]]></en>
         </locale>
-
-        <!-- news/entry -->
         <locale name="entry.news.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>
         </locale>
-
         <locale name="entry.news.on">
             <de><![CDATA[am]]></de>
             <en><![CDATA[on]]></en>
         </locale>
-
         <locale name="entry.news.prev">
             <de><![CDATA[voriger Beitrag]]></de>
             <en><![CDATA[previous newspost]]></en>
@@ -81,8 +77,6 @@
             <de><![CDATA[nächster Beitrag]]></de>
             <en><![CDATA[next newspost]]></en>
         </locale>
-
-        <!-- news sheet -->
         <locale name="sheet.first.page">
             <de><![CDATA[Erste Seite]]></de>
             <en><![CDATA[First page]]></en>
@@ -100,9 +94,14 @@
             <en><![CDATA[next]]></en>
         </locale>
         <locale name="sheet.mobile.option">
-            <de><![CDATA[Seite [from] eins [max]]]></de>
+            <de><![CDATA[Seite [from] von [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
         </locale>
     </groups>
-
+    <groups name="quiqqer/news" datatype="php,js ">
+        <locale name="quiqqer/news:types/news-entry.description">
+            <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
+    </groups>
 </locales>
