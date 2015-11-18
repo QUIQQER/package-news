@@ -9,11 +9,7 @@
          itemscope itemtype="http://schema.org/NewsArticle"
 >
 
-    {if $Template->getAttribute('content-header')}
-    <section class="content-header grid-100 mobile-grid-100 grid-parent">
-        <header>
-            <h1 itemprop="name">{$Site->getAttribute('title')}</h1>
-
+    <section class="news-entry-time grid-100 mobile-grid-100 grid-parent">
             {user id=$Site->getAttribute('c_user') var=User}
             {t}quiqqer/news entry.news.by{/t}
             <span class="news-entry-author">
@@ -30,17 +26,9 @@
             >
                 {locale_date date=$date}
             </time>
-        </header>
-
-        {if $Site->getAttribute('short')}
-        <div class="content-short" itemprop="description">
-            {$Site->getAttribute('short')|nl2br}
-        </div>
-        {/if}
     </section>
-    {/if}
 
-    {if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
+    {if $Site->getAttribute('content')}
     <section class="news-entry-content content-body grid-100 mobile-grid-100 grid-parent"
              itemprop="articleBody"
     >
