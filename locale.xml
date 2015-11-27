@@ -23,6 +23,10 @@
             <de><![CDATA[QUIQQER - Newsliste ]]></de>
             <en><![CDATA[]]></en>
         </locale>
+        <locale name="quiqqer/news:types/news-entry.description">
+            <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
     </groups>
     <groups name="quiqqer/news" datatype="php">
         <locale name="admin.types.news.list">
@@ -96,12 +100,6 @@
         <locale name="sheet.mobile.option">
             <de><![CDATA[Seite [from] von [max]]]></de>
             <en><![CDATA[page [from] of [max]]]></en>
-        </locale>
-    </groups>
-    <groups name="quiqqer/news" datatype="php,js ">
-        <locale name="quiqqer/news:types/news-entry.description">
-            <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
-            <en><![CDATA[]]></en>
         </locale>
     </groups>
 </locales>
