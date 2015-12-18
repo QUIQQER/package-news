@@ -18,7 +18,7 @@ class NewsList
     /**
      * event on child create
      *
-     * @param Integer $newId
+     * @param integer $newId
      * @param \QUI\Projects\Site\Edit $Parent
      */
     public static function onChildCreate($newId, $Parent)
