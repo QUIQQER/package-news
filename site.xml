@@ -2,7 +2,7 @@
 <site>
 
     <types>
-        <type type="types/news-list" extend="QUI\News\NewsList" icon="icon-list">
+        <type type="types/news-list" extend="QUI\News\NewsList" icon="fa fa-list">
             <locale group="quiqqer/news" var="admin.types.news.list" />
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.list.desc" />
@@ -33,7 +33,7 @@
             </settings>
         </type>
 
-        <type type="types/news-entry" extend="QUI\News\Entry" icon="icon-file-text">
+        <type type="types/news-entry" extend="QUI\News\Entry" icon="fa fa-file-text">
             <locale group="quiqqer/news" var="admin.types.news.entry" />
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.entry.desc" />
