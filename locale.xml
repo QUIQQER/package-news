@@ -11,20 +11,20 @@
 <p>F&uuml;gen Sie dazu Ihrem Projekt den Seitentyp &bdquo;Newsliste&ldquo; hinzu und verfassen sie eine Meldung mit dem Seitentyp &bdquo;News-Eintrag&ldquo;</p>]]></de>
             <en><![CDATA[]]></en>
         </locale>
+        <locale name="quiqqer/news:types/news-entry.description">
+            <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
+            <en><![CDATA[]]></en>
+        </locale>
         <locale name="quiqqer/news:types/news-entry.title">
             <de><![CDATA[QUIQQER - News-Eintrag]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[QUIQQER News Entry]]></en>
         </locale>
         <locale name="quiqqer/news:types/news-list.description">
             <de><![CDATA[Legen Sie eine Newsliste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
             <en><![CDATA[]]></en>
         </locale>
         <locale name="quiqqer/news:types/news-list.title">
-            <de><![CDATA[QUIQQER - Newsliste ]]></de>
-            <en><![CDATA[]]></en>
-        </locale>
-        <locale name="quiqqer/news:types/news-entry.description">
-            <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
+            <de><![CDATA[QUIQQER - Newsliste ]]></de>
             <en><![CDATA[]]></en>
         </locale>
     </groups>
@@ -39,7 +39,7 @@
         </locale>
         <locale name="admin.types.news.entry">
             <de><![CDATA[News-Eintrag]]></de>
-            <en><![CDATA[News entry]]></en>
+            <en><![CDATA[News Entry]]></en>
         </locale>
         <locale name="admin.types.news.entry.desc">
             <de><![CDATA[Neuigkeiten]]></de>
