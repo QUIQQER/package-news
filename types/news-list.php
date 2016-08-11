@@ -14,7 +14,8 @@ $ChildrenList = new QUI\Controls\ChildrenList(array(
     ),
     'limit'          => $Site->getAttribute('quiqqer.settings.news.max'),
     'itemtype'       => "http://schema.org/ItemList",
-    'child-itemtype' => "http://schema.org/NewsArticle"
+    'child-itemtype' => "http://schema.org/NewsArticle",
+    'display'        => $Site->getAttribute('quiqqer.settings.news.template')
 ));
 
 $Engine->assign(array(

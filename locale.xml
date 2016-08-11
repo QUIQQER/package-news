@@ -45,14 +45,36 @@
             <de><![CDATA[Neuigkeiten]]></de>
             <en><![CDATA[News]]></en>
         </locale>
+
+        <!-- Site settings -->
         <locale name="quiqqer.news.list.settings.title">
             <de><![CDATA[Neuigkeitenlisten-Einstellungen]]></de>
             <en><![CDATA[News list settings]]></en>
         </locale>
-        <locale name="quiqqer.news.list.settings.max">
-            <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
-            <en><![CDATA[Number of news posts per page]]></en>
-        </locale>
+
+            <!-- max site -->
+            <locale name="quiqqer.news.list.settings.max">
+                <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
+                <en><![CDATA[Number of news posts per page]]></en>
+            </locale>
+
+            <!-- Display template -->
+            <locale name="news.list.settings.template">
+                <de><![CDATA[Erscheinung]]></de>
+                <en><![CDATA[Display]]></en>
+                <pl><![CDATA[Wyswietlanie]]></pl>
+            </locale>
+            <locale name="list.template.childrenList">
+                <de><![CDATA[Standard]]></de>
+                <en><![CDATA[Default]]></en>
+                <pl><![CDATA[Standardowy widok]]></pl>
+            </locale>
+            <locale name="list.template.authorTop">
+                <de><![CDATA[Autor und Datum oben]]></de>
+                <en><![CDATA[Author and date top]]></en>
+                <pl><![CDATA[Autor i data na górze]]></pl>
+            </locale>
+
         <locale name="list.news.by">
             <de><![CDATA[von]]></de>
             <en><![CDATA[by]]></en>

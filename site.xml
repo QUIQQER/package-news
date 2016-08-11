@@ -11,6 +11,7 @@
             <!-- extra attributes -->
             <attributes>
                 <attribute>quiqqer.settings.news.max</attribute>
+                <attribute>quiqqer.settings.news.template</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -27,6 +28,18 @@
                                 <locale group="quiqqer/news" var="quiqqer.news.list.settings.max" />
                             </text>
                         </input>
+
+                        <select conf="quiqqer.settings.news.template">
+                            <text>
+                                <locale group="quiqqer/news" var="news.list.settings.template" />
+                            </text>
+                            <option value="childrenlist">
+                                <locale group="quiqqer/news" var="list.template.childrenList" />
+                            </option>
+                            <option value="authortop">
+                                <locale group="quiqqer/news" var="list.template.authorTop" />
+                            </option>
+                        </select>
                     </settings>
                 </category>
 
