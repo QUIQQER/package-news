@@ -60,14 +60,19 @@
 
             <!-- Display template -->
             <locale name="news.list.settings.template">
-                <de><![CDATA[Erscheinung]]></de>
-                <en><![CDATA[Display]]></en>
-                <pl><![CDATA[Wyswietlanie]]></pl>
+                <de><![CDATA[Layout]]></de>
+                <en><![CDATA[Layout]]></en>
+                <pl><![CDATA[Layout]]></pl>
             </locale>
             <locale name="list.template.childrenList">
                 <de><![CDATA[Standard]]></de>
                 <en><![CDATA[Default]]></en>
                 <pl><![CDATA[Standardowy widok]]></pl>
+            </locale>
+            <locale name="list.template.longFooter">
+                <de><![CDATA[Langes Footer]]></de>
+                <en><![CDATA[Long footer]]></en>
+                <pl><![CDATA[Dłuższą stopka]]></pl>
             </locale>
             <locale name="list.template.authorTop">
                 <de><![CDATA[Autor und Datum oben]]></de>
