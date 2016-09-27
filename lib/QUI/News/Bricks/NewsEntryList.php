@@ -12,7 +12,7 @@ use QUI;
  * Class EntryList
  * @package QUI\News\Controls
  */
-class EntryList extends QUI\Control
+class NewsEntryList extends QUI\Control
 {
 
     public function __construct($attributes = array())
@@ -27,7 +27,7 @@ class EntryList extends QUI\Control
         ));
 
         $this->addCSSFile(
-            dirname(__FILE__) . '/TeamList.css'
+            dirname(__FILE__) . '/NewsEntryList.css'
         );
 
         parent::__construct($attributes);
@@ -40,7 +40,7 @@ class EntryList extends QUI\Control
 
         $children = $Project->getSites(array(
             'where' => array(
-                'type' => 'quiqqer/news:types/news-entry'
+                'type' => 'quiqqer/news:types/news-entry-list'
             ),
             'limit' => (int)$this->getAttribute('max'),
             'order' => 'release_from DESC'
@@ -51,6 +51,6 @@ class EntryList extends QUI\Control
             'this'     => $this
         ));
 
-        return $Engine->fetch(dirname(__FILE__) . '/EntryList.html');
+        return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.html');
     }
 }
