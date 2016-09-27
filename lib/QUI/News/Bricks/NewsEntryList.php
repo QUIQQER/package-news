@@ -22,7 +22,7 @@ class NewsEntryList extends QUI\Control
             'max'        => 5,
             'Project'    => false,
             'class'      => 'quiqqer-news-entrylist',
-            'dateFormat' => '%d',
+            'dateFormat' => '%d-%m-%Y',
             'dayFormat'  => '%a'
         ));
 
@@ -40,7 +40,7 @@ class NewsEntryList extends QUI\Control
 
         $children = $Project->getSites(array(
             'where' => array(
-                'type' => 'quiqqer/news:types/news-entry-list'
+                'type' => 'quiqqer/news:types/news-entry'
             ),
             'limit' => (int)$this->getAttribute('max'),
             'order' => 'release_from DESC'

@@ -1,16 +1,50 @@
-{*foreach from=$children item=Child}
+{foreach from=$children item=Child}
 
 <div class="control-news-list">
     <header>
+        <h4>
         <a href="{url site=$Child}">
             {$Child->getAttribute('title')}
         </a>
+        </h4>
     </header>
     <div class="control-news-list-short">
         {$Child->getAttribute('short')}
     </div>
+    <div class="control-news-list-time">
+        <span class="qui-control-list-entry-date-author">
+            {user id=$Child->getAttribute('c_user') var=User}
+            <span class="fa fa-user"></span>
+            {if $User->getId() && $User->getAttribute('firstname')}
+                {$User->getAttribute('firstname')}
+            {else if $User->getId()}
+                {$User->getname()}
+            {/if}
+        </span>
+
+        <span class="fa fa-calendar"></span>
+        {if $Child->getAttribute('release_from') &&
+        $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
+        <time datetime="{$Child->getAttribute('release_from')|date_format:"c"}"
+        itemprop="datePublished"
+        >
+            {*locale_date date=$Child->getAttribute('release_from')|date_format:"%d/%m/%Y - %H:%M:%S"*}
+            {*$Child->getAttribute('release_from')|date_format:$this->getAttribute('dateFormat')*}
+            {*$Child->getAttribute('release_from')|date_format:"%d/%m/%Y"}
+            <span class="fa fa-clock-o"></span>
+            {$Child->getAttribute('release_from')|date_format:"%H:%M"*}
+        </time>
+        {else}
+
+
+        <time datetime="{$Child->getAttribute('c_date')|date_format:"c"}"
+        itemprop="datePublished"
+        >
+        {locale_date date=$Child->getAttribute('c_date')}
+        </time>
+
+        {/if}
+    </div>
 </div>
 
-{/foreach}*}
-
-dupa
+{/foreach}
