@@ -27,6 +27,17 @@
             <de><![CDATA[QUIQQER - Newsliste ]]></de>
             <en><![CDATA[]]></en>
         </locale>
+
+        <!-- news list entry -->
+        <locale name="news.control.list.title">
+            <de><![CDATA[Newsliste]]></de>
+            <en><![CDATA[News list]]></en>
+        </locale>
+        <locale name="news.control.list.description">
+            <de><![CDATA[Stellt eine Liste mit Neuigkeiten dar, die man als Baustein überall
+                        platzieren kan.]]></de>
+            <en><![CDATA[List of the latest news]]></en>
+        </locale>
     </groups>
     <groups name="quiqqer/news" datatype="php">
         <locale name="admin.types.news.list">

@@ -1,0 +1,16 @@
+{*foreach from=$children item=Child}
+
+<div class="control-news-list">
+    <header>
+        <a href="{url site=$Child}">
+            {$Child->getAttribute('title')}
+        </a>
+    </header>
+    <div class="control-news-list-short">
+        {$Child->getAttribute('short')}
+    </div>
+</div>
+
+{/foreach}*}
+
+dupa
