@@ -6,8 +6,8 @@
 
 $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showContent'    => false,
-    'showTime'       => true,
-    'showCreator'    => true,
+    'showTime'       => $Site->getAttribute('quiqqer.settings.news.showTime'),
+    'showCreator'    => $Site->getAttribute('quiqqer.settings.news.showCreator'),
     'Site'           => $Site,
     'where'          => array(
         'type' => 'quiqqer/news:types/news-entry'

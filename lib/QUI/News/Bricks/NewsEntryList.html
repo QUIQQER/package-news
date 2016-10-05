@@ -1,3 +1,5 @@
+
+
 {foreach from=$children item=Child}
 
 <div class="control-news-list">
@@ -30,9 +32,9 @@
         >
             {*locale_date date=$Child->getAttribute('release_from')|date_format:"%d/%m/%Y - %H:%M:%S"*}
             {*$Child->getAttribute('release_from')|date_format:$this->getAttribute('dateFormat')*}
-            {*$Child->getAttribute('release_from')|date_format:"%d/%m/%Y"}
+            {$Child->getAttribute('release_from')|date_format:"%d/%m/%Y"}
             <span class="fa fa-clock-o"></span>
-            {$Child->getAttribute('release_from')|date_format:"%H:%M"*}
+            {$Child->getAttribute('release_from')|date_format:"%H:%M"}
         </time>
         {else}
 

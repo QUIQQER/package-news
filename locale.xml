@@ -57,7 +57,7 @@
             <en><![CDATA[News]]></en>
         </locale>
 
-        <!-- Site settings -->
+        <!-- Site list settings -->
         <locale name="quiqqer.news.list.settings.title">
             <de><![CDATA[Neuigkeitenlisten-Einstellungen]]></de>
             <en><![CDATA[News list settings]]></en>
@@ -69,7 +69,7 @@
                 <en><![CDATA[Number of news posts per page]]></en>
             </locale>
 
-            <!-- Display template -->
+            <!-- News template -->
             <locale name="news.list.settings.template">
                 <de><![CDATA[Layout]]></de>
                 <en><![CDATA[Layout]]></en>
@@ -90,6 +90,21 @@
                 <en><![CDATA[Author and date top]]></en>
                 <pl><![CDATA[Autor i data na górze]]></pl>
             </locale>
+
+            <!-- show author -->
+            <locale name="list.showCreator">
+                <de><![CDATA[Autor anzeigen]]></de>
+                <en><![CDATA[Show author]]></en>
+                <pl><![CDATA[Pokaż autora]]></pl>
+            </locale>
+
+            <!-- show date -->
+            <locale name="list.showTime">
+                <de><![CDATA[Datum anzeigen]]></de>
+                <en><![CDATA[Show date]]></en>
+                <pl><![CDATA[Pokaż datę]]></pl>
+            </locale>
+
 
         <locale name="list.news.by">
             <de><![CDATA[von]]></de>
