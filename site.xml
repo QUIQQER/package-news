@@ -10,8 +10,8 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute>quiqqer.settings.news.max</attribute>
                 <attribute>quiqqer.settings.news.template</attribute>
+                <attribute>quiqqer.settings.news.max</attribute>
                 <attribute>quiqqer.settings.news.showCreator</attribute>
                 <attribute>quiqqer.settings.news.showTime</attribute>
             </attributes>
@@ -24,12 +24,6 @@
                         <title>
                             <locale group="quiqqer/news" var="quiqqer.news.list.settings.title" />
                         </title>
-
-                        <input conf="quiqqer.settings.news.max" type="number">
-                            <text>
-                                <locale group="quiqqer/news" var="quiqqer.news.list.settings.max" />
-                            </text>
-                        </input>
 
                         <select conf="quiqqer.settings.news.template">
                             <text>
@@ -45,6 +39,12 @@
                                 <locale group="quiqqer/news" var="list.template.authorTop" />
                             </option>
                         </select>
+
+                        <input conf="quiqqer.settings.news.max" type="number">
+                            <text>
+                                <locale group="quiqqer/news" var="quiqqer.news.list.settings.max" />
+                            </text>
+                        </input>
 
                         <input conf="quiqqer.settings.news.showCreator" type="checkbox">
                             <text>

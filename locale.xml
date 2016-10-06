@@ -70,7 +70,7 @@
             </locale>
 
             <!-- News template -->
-            <locale name="news.list.settings.template">
+            <locale name="list.template">
                 <de><![CDATA[Layout]]></de>
                 <en><![CDATA[Layout]]></en>
                 <pl><![CDATA[Layout]]></pl>
