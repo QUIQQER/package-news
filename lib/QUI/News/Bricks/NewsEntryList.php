@@ -19,11 +19,16 @@ class NewsEntryList extends QUI\Control
     {
         // default options
         $this->setAttributes(array(
-            'max'        => 5,
-            'Project'    => false,
-            'class'      => 'quiqqer-news-entrylist',
-            'dateFormat' => '%d-%m-%Y',
-            'dayFormat'  => '%a'
+            'max'         => 5,
+            'Project'     => false,
+            'class'       => 'quiqqer-news-entrylist',
+            'dateFormat'  => '%d-%m-%Y',
+            'dayFormat'   => '%a',
+            'showCreator' => true,
+            'showDate'    => true,
+            'showTime'    => true,
+            'showImages'  => true,
+            'template'    => 'standard'
         ));
 
         $this->addCSSFile(
@@ -38,11 +43,15 @@ class NewsEntryList extends QUI\Control
         $Engine  = QUI::getTemplateManager()->getEngine();
         $Project = $this->getProject();
 
+
+
+        $max = $this->getAttribute('news.max');
+
         $children = $Project->getSites(array(
             'where' => array(
                 'type' => 'quiqqer/news:types/news-entry'
             ),
-            'limit' => (int)$this->getAttribute('max'),
+            'limit' => (int)$max,
             'order' => 'release_from DESC'
         ));
 
@@ -51,6 +60,17 @@ class NewsEntryList extends QUI\Control
             'this'     => $this
         ));
 
-        return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.html');
+        switch ($this->getAttribute('news.template')) {
+            case 'border' :
+                $this->addCSSFile(dirname(__FILE__) . '/NewsEntryList.Border.css');
+
+                return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.Border.html');
+            case 'standard':
+            default:
+                $this->addCSSFile(dirname(__FILE__) . '/NewsEntryList.Standard.css');
+
+                return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.Standard.html');
+        }
+
     }
 }
