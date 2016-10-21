@@ -44,7 +44,6 @@ class NewsEntryList extends QUI\Control
         $Project = $this->getProject();
 
 
-
         $max = $this->getAttribute('news.max');
 
         $children = $Project->getSites(array(
