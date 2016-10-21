@@ -60,7 +60,7 @@ class NewsEntryList extends QUI\Control
         ));
 
         switch ($this->getAttribute('news.template')) {
-            case 'border' :
+            case 'border':
                 $this->addCSSFile(dirname(__FILE__) . '/NewsEntryList.Border.css');
 
                 return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.Border.html');
@@ -70,6 +70,5 @@ class NewsEntryList extends QUI\Control
 
                 return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.Standard.html');
         }
-
     }
 }
