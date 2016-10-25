@@ -20,6 +20,8 @@
 h3.control-news-list-title {
     padding-bottom: 0;
     line-height: 2em;
+    font-weight: 600;
+    font-size: 1.4em;
 }
 
 .control-news-list {
@@ -41,6 +43,10 @@ h3.control-news-list-title {
 .control-news-list-image {
     margin-bottom: 1em;
     text-align: center;
+}
+
+.control-news-list-image .quiqqer-icon {
+    font-size: 100px;
 }
 
 .control-news-list header {

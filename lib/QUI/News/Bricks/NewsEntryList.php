@@ -24,9 +24,10 @@ class NewsEntryList extends QUI\Control
             'class'       => 'quiqqer-news-entrylist',
             'dateFormat'  => '%d-%m-%Y',
             'dayFormat'   => '%a',
+            'showShort'   => true,
             'showCreator' => true,
             'showDate'    => true,
-            'showTime'    => true,
+            'showTime'    => false,
             'showImages'  => true,
             'template'    => 'standard'
         ));
@@ -60,6 +61,14 @@ class NewsEntryList extends QUI\Control
         ));
 
         switch ($this->getAttribute('news.template')) {
+            case 'simpleArticleList':
+                $this->addCSSFile(dirname(__FILE__) . '/NewsEntryList.SimpleArticleList.css');
+
+                return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.SimpleArticleList.html');
+            case 'advancedArticleList':
+                $this->addCSSFile(dirname(__FILE__) . '/NewsEntryList.AdvancedArticleList.css');
+
+                return $Engine->fetch(dirname(__FILE__) . '/NewsEntryList.AdvancedArticleList.html');
             case 'border':
                 $this->addCSSFile(dirname(__FILE__) . '/NewsEntryList.Border.css');
 

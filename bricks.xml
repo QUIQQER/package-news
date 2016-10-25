@@ -14,11 +14,17 @@
             <settings>
                 <setting name="news.template" type="select">
                     <locale group="quiqqer/news" var="news.template" />
+                    <option value="standard">
+                        <locale group="quiqqer/news" var="news.standard" />
+                    </option>
                     <option value="border">
                         <locale group="quiqqer/news" var="news.border" />
                     </option>
-                    <option value="standard">
-                        <locale group="quiqqer/news" var="news.standard" />
+                    <option value="simpleArticleList">
+                        <locale group="quiqqer/news" var="news.simpleArticleList" />
+                    </option>
+                    <option value="advancedArticleList">
+                        <locale group="quiqqer/news" var="news.advancedArticleList" />
                     </option>
                 </setting>
 
@@ -27,6 +33,11 @@
                     <locale group="quiqqer/news"
                             var="news.max"
                     />
+                </setting>
+
+                <setting name="news.showShort" type="checkbox">
+                    <locale group="news.showShort"
+                            var="news.showShort" />
                 </setting>
 
                 <setting name="news.showCreator" type="checkbox">

@@ -13,6 +13,7 @@
 
     <div class="control-news-list">
 
+        <a href="{url site=$Child}" class="mainFontColor">
         <!-- entry image -->
         {if $this->getAttribute('news.showImages')}
         <div class="control-news-list-image">
@@ -29,7 +30,6 @@
 
             {if $Child->getAttribute('image_site')}
             {image src=$Child->getAttribute('image_site')
-            style="height: auto;"
             maxwidth="380"}
             {else}
             <img src="{$Child->getProject()->getMedia()->getPlaceholder()}" style="height: auto;" />
@@ -39,21 +39,24 @@
 
         <header>
             <h4>
-                <a href="{url site=$Child}">
                     {$Child->getAttribute('title')}
-                </a>
             </h4>
         </header>
+
+        {if $this->getAttribute('news.showShort')}
         <div class="control-news-list-short">
             {$Child->getAttribute('short')}
         </div>
+        {/if}
 
-        {if $this->getAttribute('showDate') || $this->getAttribute('showDate') || $this->getAttribute('showTime')}
+        {if $this->getAttribute('news.showDate') ||
+        $this->getAttribute('news.showDate') ||
+        $this->getAttribute('news.showTime')}
         <div class="control-news-list-time">
 
-            {if $this->getAttribute('showCreator')}
+            {if $this->getAttribute('news.showCreator')}
             <div class="control-news-list-time-wrapper">
-                <span class="qui-control-list-entry-date-author">
+                <span class="qui-control-list-entry-date-author control-news-list-span">
                     {user id=$Child->getAttribute('c_user') var=User}
                     <span class="fa fa-user news-list-time-icon"></span>
                     {if $User->getId() && $User->getAttribute('firstname')}
@@ -65,15 +68,14 @@
             </div>
             {/if}
 
-            {if $this->getAttribute('showDate') || $this->getAttribute('showTime')}
+            {if $this->getAttribute('news.showDate') || $this->getAttribute('news.showTime')}
             <div class="control-news-list-time-wrapper">
                 {if $Child->getAttribute('release_from') &&
                 $Child->getAttribute('release_from') != '0000-00-00 00:00:00'}
-                <time class="control-news-list-time-"
-                    datetime="{$Child->getAttribute('release_from')|date_format:"c"}"
+                <time datetime="{$Child->getAttribute('release_from')|date_format:"c"}"
                     itemprop="datePublished"
                     >
-                    {if $this->getAttribute('showDate')}
+                    {if $this->getAttribute('news.showDate')}
                     <span class="control-news-list-span">
                         <span class="fa fa-calendar news-list-time-icon"></span>
                         {*locale_date date=$Child->getAttribute('release_from')|date_format:"%d/%m/%Y - %H:%M:%S"*}
@@ -81,7 +83,7 @@
                         {$Child->getAttribute('release_from')|date_format:"%d/%m/%Y"}
                     </span>
                     {/if}
-                    {if $this->getAttribute('showTime')}
+                    {if $this->getAttribute('news.showTime')}
                     <span class="control-news-list-span">
                         <span class="fa fa-clock-o news-list-time-icon"></span>
                         {$Child->getAttribute('release_from')|date_format:"%H:%M"}
@@ -102,6 +104,7 @@
 
         </div>
         {/if}
+        </a>
     </div>
 
     {/foreach}
