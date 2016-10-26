@@ -89,14 +89,14 @@
         </locale>
 
         <!-- show creator -->
-        <locale name="news.creator">
+        <locale name="news.showCreator">
             <de><![CDATA[Author anzeigen]]></de>
             <en><![CDATA[Show author]]></en>
             <pl><![CDATA[Pokaż autora]]></pl>
         </locale>
 
         <!-- show date -->
-        <locale name="news.date">
+        <locale name="news.showDate">
             <de><![CDATA[Datum anzeigen]]></de>
             <en><![CDATA[Show date]]></en>
             <pl><![CDATA[Pokaż datę publikacji]]></pl>
@@ -114,6 +114,13 @@
             <de><![CDATA[Bild anzeigen]]></de>
             <en><![CDATA[Show image]]></en>
             <pl><![CDATA[Pokaż zdjęcie artykułów]]></pl>
+        </locale>
+
+
+        <locale name="news.sectionTitle">
+            <de><![CDATA[Letzte News]]></de>
+            <en><![CDATA[Last News]]></en>
+            <pl><![CDATA[Ostatnie newsy]]></pl>
         </locale>
     </groups>
 

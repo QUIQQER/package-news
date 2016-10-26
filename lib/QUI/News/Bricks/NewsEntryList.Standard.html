@@ -10,7 +10,7 @@
 
 {foreach from=$children item=Child}
 
-<div class="control-news-list">
+<article class="control-news-list">
     <a href="{url site=$Child}" class="mainFontColor">
 
     <!-- entry image -->
@@ -39,8 +39,7 @@
 
     <header>
         <h4>
-                {$Child->getAttribute('title')}
-
+            {$Child->getAttribute('title')}
         </h4>
     </header>
 
@@ -106,6 +105,6 @@
     </div>
     {/if}
     </a>
-</div>
+</article>
 
 {/foreach}
