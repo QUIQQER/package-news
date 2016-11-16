@@ -5,6 +5,7 @@
  */
 
 $ChildrenList = new QUI\Controls\ChildrenList(array(
+    'showTitle'      => false,
     'showContent'    => false,
     'showTime'       => $Site->getAttribute('quiqqer.settings.news.showTime'),
     'showCreator'    => $Site->getAttribute('quiqqer.settings.news.showCreator'),

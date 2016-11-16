@@ -29,13 +29,13 @@
                             <text>
                                 <locale group="quiqqer/news" var="list.template" />
                             </text>
-                            <option value="childrenlist">
+                            <option value="childrenList">
                                 <locale group="quiqqer/news" var="list.template.childrenList" />
                             </option>
-                            <option value="longfooter">
+                            <option value="longFooter">
                                 <locale group="quiqqer/news" var="list.template.longFooter" />
                             </option>
-                            <option value="authortop">
+                            <option value="authorTop">
                                 <locale group="quiqqer/news" var="list.template.authorTop" />
                             </option>
                         </select>
