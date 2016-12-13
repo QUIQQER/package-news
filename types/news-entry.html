@@ -5,7 +5,7 @@
     {assign var=date value=$Site->getAttribute('c_date')}
 {/if}
 
-<article class="news-entry quiqqer-news-entry grid-100 mobile-grid-100 grid-parent"
+<article class="news-entry quiqqer-news-entry grid-100 mobile-grid-100 grid-parent content-body"
          itemscope itemtype="http://schema.org/NewsArticle"
 >
 
@@ -29,7 +29,7 @@
     </section>
 
     {if $Site->getAttribute('content')}
-    <section class="news-entry-content content-body grid-100 mobile-grid-100 grid-parent"
+    <section class="news-entry-content grid-100 mobile-grid-100 grid-parent"
              itemprop="articleBody"
     >
         {$Site->getAttribute('content')}
@@ -39,7 +39,7 @@
     {sibling site=$Site type="next" assign=NextSibling}
     {sibling site=$Site type="prev" assign=PrevSibling}
 
-    <aside class="content-body">
+    <aside class="">
         {if $PrevSibling}
         <a href="{url site=$PrevSibling}" class="news-entry-prev button"
            title="{$PrevSibling->getAttribute('title')|escape:"html"}"
