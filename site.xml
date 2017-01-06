@@ -10,10 +10,11 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute>quiqqer.settings.news.template</attribute>
-                <attribute>quiqqer.settings.news.max</attribute>
-                <attribute>quiqqer.settings.news.showCreator</attribute>
-                <attribute>quiqqer.settings.news.showTime</attribute>
+                <attribute default="childrenList">quiqqer.settings.news.template</attribute>
+                <attribute default="6">quiqqer.settings.news.max</attribute>
+                <attribute default="1">quiqqer.settings.news.showCreator</attribute>
+                <attribute default="1">quiqqer.settings.news.showDate</attribute>
+                <attribute default="0">quiqqer.settings.news.showTime</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -29,11 +30,11 @@
                             <text>
                                 <locale group="quiqqer/news" var="list.template" />
                             </text>
-                            <option value="standardList">
-                                <locale group="quiqqer/sitetypes" var="list.template.standardList"/>
+                            <option value="imageTop">
+                                <locale group="quiqqer/sitetypes" var="list.template.imageTop"/>
                             </option>
-                            <option value="listWithBorder">
-                                <locale group="quiqqer/sitetypes" var="list.template.listWithBorder"/>
+                            <option value="imageTopBorder">
+                                <locale group="quiqqer/sitetypes" var="list.template.imageTopBorder"/>
                             </option>
                             <option value="simpleArticleList">
                                 <locale group="quiqqer/sitetypes" var="list.template.simpleArticleList"/>
@@ -76,9 +77,17 @@
                             </text>
                         </input>
 
+                        <input conf="quiqqer.settings.news.showDate" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showDate" />
+                            </text>
+                        </input>
+
                         <input conf="quiqqer.settings.news.showTime" type="checkbox">
                             <text>
-                                <locale group="quiqqer/news" var="list.showTime" />
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showTime" />
                             </text>
                         </input>
 
