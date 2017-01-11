@@ -1,12 +1,9 @@
-<div class="quiqqer-news-list" itemscope itemtype="http://schema.org/ItemList">
+{if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
+<section class="content-body">
+    {$Site->getAttribute('content')}
+</section>
+{/if}
 
-    {if $Template->getAttribute('content-body') && $Site->getAttribute('content')}
-    <section class="content-body">
-        {$Site->getAttribute('content')}
-    </section>
-    {/if}
-
-    <section class="content-template">
-        {$ChildrenList->create()}
-    </section>
-</div>
+<section class="content-template">
+    {$ChildrenList->create()}
+</section>

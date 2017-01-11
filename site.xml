@@ -12,6 +12,8 @@
             <attributes>
                 <attribute default="childrenList">quiqqer.settings.news.template</attribute>
                 <attribute default="6">quiqqer.settings.news.max</attribute>
+                <attribute default="1">quiqqer.settings.news.showImages</attribute>
+                <attribute default="1">quiqqer.settings.news.showShort</attribute>
                 <attribute default="1">quiqqer.settings.news.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.news.showDate</attribute>
                 <attribute default="0">quiqqer.settings.news.showTime</attribute>
@@ -68,6 +70,20 @@
                         <input conf="quiqqer.settings.news.max" type="number">
                             <text>
                                 <locale group="quiqqer/news" var="quiqqer.news.list.settings.max" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.showImages" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showImages" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.showShort" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showShort" />
                             </text>
                         </input>
 
