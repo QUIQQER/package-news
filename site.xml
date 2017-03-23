@@ -2,7 +2,7 @@
 <site>
 
     <types>
-        <type type="types/news-list" extend="QUI\News\NewsList" icon="icon-list">
+        <type type="types/news-list" extend="QUI\News\NewsList" icon="fa fa-list">
             <locale group="quiqqer/news" var="admin.types.news.list" />
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.list.desc" />
@@ -10,7 +10,13 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute>quiqqer.settings.news.max</attribute>
+                <attribute default="childrenList">quiqqer.settings.news.template</attribute>
+                <attribute default="6">quiqqer.settings.news.max</attribute>
+                <attribute default="1">quiqqer.settings.news.showImages</attribute>
+                <attribute default="1">quiqqer.settings.news.showShort</attribute>
+                <attribute default="1">quiqqer.settings.news.showCreator</attribute>
+                <attribute default="1">quiqqer.settings.news.showDate</attribute>
+                <attribute default="0">quiqqer.settings.news.showTime</attribute>
             </attributes>
 
             <!-- list settings -->
@@ -22,18 +28,92 @@
                             <locale group="quiqqer/news" var="quiqqer.news.list.settings.title" />
                         </title>
 
+                        <select conf="quiqqer.settings.news.template">
+                            <text>
+                                <locale group="quiqqer/news" var="list.template" />
+                            </text>
+                            <option value="imageTop">
+                                <locale group="quiqqer/sitetypes" var="list.template.imageTop"/>
+                            </option>
+                            <option value="imageTopBorder">
+                                <locale group="quiqqer/sitetypes" var="list.template.imageTopBorder"/>
+                            </option>
+                            <option value="simpleArticleList">
+                                <locale group="quiqqer/sitetypes" var="list.template.simpleArticleList"/>
+                            </option>
+                            <option value="advancedArticleList">
+                                <locale group="quiqqer/sitetypes" var="list.template.advancedArticleList"/>
+                            </option>
+                            <option value="1er">
+                                <locale group="quiqqer/sitetypes" var="list.template.1er"/>
+                            </option>
+                            <option value="2er">
+                                <locale group="quiqqer/sitetypes" var="list.template.2er"/>
+                            </option>
+                            <option value="3er">
+                                <locale group="quiqqer/sitetypes" var="list.template.3er"/>
+                            </option>
+                            <option value="4er">
+                                <locale group="quiqqer/sitetypes" var="list.template.4er"/>
+                            </option>
+                            <option value="childrenList">
+                                <locale group="quiqqer/sitetypes" var="list.template.childrenList" />
+                            </option>
+                            <option value="longFooter">
+                                <locale group="quiqqer/sitetypes" var="list.template.longFooter" />
+                            </option>
+                            <option value="authorTop">
+                                <locale group="quiqqer/sitetypes" var="list.template.authorTop" />
+                            </option>
+                        </select>
+
                         <input conf="quiqqer.settings.news.max" type="number">
                             <text>
                                 <locale group="quiqqer/news" var="quiqqer.news.list.settings.max" />
                             </text>
                         </input>
+
+                        <input conf="quiqqer.settings.news.showImages" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showImages" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.showShort" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showShort" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.showCreator" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="list.showCreator" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.showDate" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showDate" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.showTime" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/sitetypes"
+                                        var="quiqqer.sitetypes.list.settings.showTime" />
+                            </text>
+                        </input>
+
                     </settings>
                 </category>
 
             </settings>
         </type>
 
-        <type type="types/news-entry" extend="QUI\News\Entry" icon="icon-file-text">
+        <type type="types/news-entry" extend="QUI\News\Entry" icon="fa fa-file-text">
             <locale group="quiqqer/news" var="admin.types.news.entry" />
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.entry.desc" />
