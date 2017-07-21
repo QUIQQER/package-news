@@ -13,6 +13,7 @@
                 <attribute default="childrenList">quiqqer.settings.news.template</attribute>
                 <attribute default="6">quiqqer.settings.news.max</attribute>
                 <attribute default="1">quiqqer.settings.news.showImages</attribute>
+                <attribute default="1">quiqqer.settings.news.showHeader</attribute>
                 <attribute default="1">quiqqer.settings.news.showShort</attribute>
                 <attribute default="1">quiqqer.settings.news.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.news.showDate</attribute>
@@ -32,6 +33,9 @@
                             <text>
                                 <locale group="quiqqer/news" var="list.template" />
                             </text>
+                            <option value="cardRows">
+                                <locale group="quiqqer/sitetypes" var="list.template.cardRows"/>
+                            </option>
                             <option value="imageTop">
                                 <locale group="quiqqer/sitetypes" var="list.template.imageTop"/>
                             </option>
