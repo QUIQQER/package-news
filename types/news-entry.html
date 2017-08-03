@@ -9,7 +9,9 @@
          itemscope itemtype="http://schema.org/NewsArticle"
 >
 
-    <section class="news-entry-time grid-100 mobile-grid-100 grid-parent">
+    {if $enableDateAndCreator}
+    <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
+        {if $showCreator}
             {user id=$Site->getAttribute('c_user') var=User}
             {t}quiqqer/news entry.news.by{/t}
             <span class="news-entry-author">
@@ -19,14 +21,20 @@
                     {$User->getname()}
                 {/if}
             </span>
+        {/if}
 
-            {t}quiqqer/news entry.news.on{/t}
-            <time datetime="{$date|date_format:"c"}"
-                  itemprop="datePublished"
-            >
-                {locale_date date=$date}
-            </time>
+        {if $showDate}
+            <span class="news-entry-time">
+                {t}quiqqer/news entry.news.on{/t}
+                <time datetime="{$date|date_format:"c"}"
+                      itemprop="datePublished"
+                >
+                    {locale_date date=$date}
+                </time>
+            </span>
+        {/if}
     </section>
+    {/if}
 
     {if $Site->getAttribute('content')}
     <section class="news-entry-content grid-100 mobile-grid-100 grid-parent"

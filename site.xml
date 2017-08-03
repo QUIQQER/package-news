@@ -122,6 +122,48 @@
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.entry.desc" />
             </desc>
+
+            <!-- extra attributes -->
+            <attributes>
+                <attribute default="1">quiqqer.settings.news.entry.dateAndCreator</attribute>
+            </attributes>
+
+            <!-- list settings -->
+            <settings>
+
+                <category name="news-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/news" var="quiqqer.news.entry.settings.title" />
+                        </title>
+
+                        <select conf="quiqqer.settings.news.entry.dateAndCreator">
+                            <text>
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator" />
+                            </text>
+
+                            <option value="showAll">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.showAll"/>
+                            </option>
+                            <option value="showCreator">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.showCreator"/>
+                            </option>
+                            <option value="showDate">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.showDate"/>
+                            </option>
+                            <option value="hide">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.hide"/>
+                            </option>
+                        </select>
+
+                    </settings>
+                </category>
+            </settings>
         </type>
     </types>
 

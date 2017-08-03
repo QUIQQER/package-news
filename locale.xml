@@ -11,7 +11,7 @@
 
 <p>F&uuml;gen Sie dazu Ihrem Projekt den Seitentyp &bdquo;Newsliste&ldquo; hinzu und verfassen sie eine Meldung mit dem Seitentyp &bdquo;News-Eintrag&ldquo;</p>]]></de>
             <en><![CDATA[]]></en>
-            <pl><![CDATA[<p>Za pomocą Pluginu &bdquo;News&ldquo; możesz w łatwy sposób stworzyć i zaprezentować listę artykułów</p>
+            <pl><![CDATA[<p>Za pomocą rozszerzenia &bdquo;News&ldquo; możesz w łatwy sposób stworzyć i zaprezentować listę artykułów</p>
 <p>Plugin dostarcza 2 nowe typy stron: listę newsów oraz wpis. Oprócz tego jest też możliwość dołączenia widgetu z listą newsów na dowolnej stronie.</p>]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-entry.description">
@@ -56,8 +56,7 @@
         <locale name="admin.types.news.entry.desc">
             <de><![CDATA[Neuigkeiten]]></de>
             <en><![CDATA[News]]></en>
-            <en><![CDATA[News]]></en>
-            <pl><![CDATA[Służy do utworzeniac kolejnych wpisów / artykułów.]]></pl>
+            <pl><![CDATA[Wpisów lub artykuł]]></pl>
         </locale>
 
         <!-- Site list settings -->
@@ -94,6 +93,39 @@
                 <en><![CDATA[Show date]]></en>
                 <pl><![CDATA[Pokaż datę]]></pl>
             </locale>
+
+        <!-- Site entry settings -->
+        <locale name="quiqqer.news.entry.settings.title">
+            <de><![CDATA[Newseintrag Einstellungen]]></de>
+            <en><![CDATA[News entry settings]]></en>
+            <pl><![CDATA[News - ustawienia]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.news.entry.dateAndCreator">
+            <de><![CDATA[Autor und Datum]]></de>
+            <en><![CDATA[Author & date]]></en>
+            <pl><![CDATA[Autor i data]]></pl>
+        </locale>
+            <locale name="quiqqer.settings.news.entry.dateAndCreator.showAll">
+                <de><![CDATA[Autor und Datum anzeigen]]></de>
+                <en><![CDATA[Show author & date]]></en>
+                <pl><![CDATA[Pokaż autora i datę]]></pl>
+            </locale>
+            <locale name="quiqqer.settings.news.entry.dateAndCreator.showCreator">
+                <de><![CDATA[Nur Autor anzeigen]]></de>
+                <en><![CDATA[Show only author]]></en>
+                <pl><![CDATA[Pokaż tylko autora]]></pl>
+            </locale>
+            <locale name="quiqqer.settings.news.entry.dateAndCreator.showDate">
+                <de><![CDATA[Nur Datum anzeigen]]></de>
+                <en><![CDATA[Show only date]]></en>
+                <pl><![CDATA[Pokaż tylko datę]]></pl>
+            </locale>
+            <locale name="quiqqer.settings.news.entry.dateAndCreator.hide">
+                <de><![CDATA[Ausgeblendet]]></de>
+                <en><![CDATA[Hide]]></en>
+                <pl><![CDATA[Wyłącz]]></pl>
+            </locale>
+
 
 
         <locale name="list.news.by">
