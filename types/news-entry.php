@@ -12,10 +12,9 @@ switch ($Site->getAttribute('quiqqer.settings.news.entry.dateAndCreator')) {
     case 'showDate':
         $showCreator = false; // hide author
         break;
-    case 'hide': {
+    case 'hide':
         $enableDateAndCreator = false; // disable date and author
         break;
-    }
 }
 
 $Engine->assign(array(
