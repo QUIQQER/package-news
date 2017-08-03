@@ -128,7 +128,7 @@
                 <attribute default="1">quiqqer.settings.news.entry.dateAndCreator</attribute>
             </attributes>
 
-            <!-- list settings -->
+            <!-- entry settings -->
             <settings>
 
                 <category name="news-list-settings">
