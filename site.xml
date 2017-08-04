@@ -15,7 +15,7 @@
                 <attribute default="1">quiqqer.settings.news.showImages</attribute>
                 <attribute default="1">quiqqer.settings.news.showHeader</attribute>
                 <attribute default="1">quiqqer.settings.news.showShort</attribute>
-                <attribute default="1">quiqqer.settings.news.showCreator</attribute>
+                <attribute default="0">quiqqer.settings.news.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.news.showDate</attribute>
                 <attribute default="0">quiqqer.settings.news.showTime</attribute>
             </attributes>
