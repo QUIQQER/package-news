@@ -7,10 +7,8 @@
             <pl><![CDATA[QUIQQER - News]]></pl>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[<p>Erstellen Sie mit dem &bdquo;News&ldquo;-Modul eine Unterseite in Ihrem Projekt, auf der Sie die neuesten Meldungen verfassen.</p>
-
-<p>F&uuml;gen Sie dazu Ihrem Projekt den Seitentyp &bdquo;Newsliste&ldquo; hinzu und verfassen sie eine Meldung mit dem Seitentyp &bdquo;News-Eintrag&ldquo;</p>]]></de>
-            <en><![CDATA[]]></en>
+            <de><![CDATA[News / Neuigkeiten Funktionalität für das QUIQQER System]]></de>
+            <en><![CDATA[News / News Functionality for the QUIQQER system]]></en>
             <pl><![CDATA[<p>Za pomocą rozszerzenia &bdquo;News&ldquo; możesz w łatwy sposób stworzyć i zaprezentować listę artykułów</p>
 <p>Plugin dostarcza 2 nowe typy stron: listę newsów oraz wpis. Oprócz tego jest też możliwość dołączenia widgetu z listą newsów na dowolnej stronie.</p>]]></pl>
         </locale>

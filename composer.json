@@ -1,7 +1,7 @@
 {
     "name" : "quiqqer/news",
     "type" : "quiqqer-module",
-    "description" : "Provided a news system for QUIQQER.",
+    "description" : "News / News Functionality for the QUIQQER system",
     "version" : "dev-dev",
     "license" : "GPL-2.0+",
 
