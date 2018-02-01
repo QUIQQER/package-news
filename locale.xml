@@ -14,23 +14,23 @@
         </locale>
         <locale name="quiqqer/news:types/news-entry.description">
             <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[Create a new page to write a news entry. News entries will be displayed and listed underneath the news-list]]></en>
             <pl><![CDATA[&bdquo;News (wpis)&ldquo; służy do utworzenia artykułów i wpisów.]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-entry.title">
             <de><![CDATA[QUIQQER - News-Eintrag]]></de>
-            <en><![CDATA[QUIQQER News Entry]]></en>
-            <pl><![CDATA[QUIQQER News (wpis)]]></pl>
+            <en><![CDATA[QUIQQER - News Entry]]></en>
+            <pl><![CDATA[QUIQQER - News (wpis)]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-list.description">
             <de><![CDATA[Legen Sie eine Newsliste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
-            <en><![CDATA[]]></en>
+            <en><![CDATA[Create a news-list. All child-sites beneath will be listed.]]></en>
             <pl><![CDATA[Utworzenie nowej listy newsów. Wszystkie jej podstrony (typu news-wpis) zostaną wyświetlone..]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-list.title">
             <de><![CDATA[QUIQQER - Newsliste ]]></de>
-            <en><![CDATA[]]></en>
-            <pl><![CDATA[QUIQQER Lista newsów]]></pl>
+            <en><![CDATA[QUIQQER - News-List]]></en>
+            <pl><![CDATA[QUIQQER - Lista newsów]]></pl>
         </locale>
     </groups>
 
@@ -38,12 +38,12 @@
         <!-- site typ news -->
         <locale name="admin.types.news.list">
             <de><![CDATA[Newsliste]]></de>
-            <en><![CDATA[News list]]></en>
+            <en><![CDATA[News-List]]></en>
             <pl><![CDATA[Lista newsów]]></pl>
         </locale>
         <locale name="admin.types.news.list.desc">
             <de><![CDATA[Newsliste]]></de>
-            <en><![CDATA[News list]]></en>
+            <en><![CDATA[News-List]]></en>
             <pl><![CDATA[Wyświetla wszystkie strony o typie news (wpis).]]></pl>
         </locale>
         <locale name="admin.types.news.entry">
@@ -60,7 +60,7 @@
         <!-- Site list settings -->
         <locale name="quiqqer.news.list.settings.title">
             <de><![CDATA[Neuigkeitenlisten-Einstellungen]]></de>
-            <en><![CDATA[News list settings]]></en>
+            <en><![CDATA[News-List settings]]></en>
             <pl><![CDATA[Lista newsów - ustawienia]]></pl>
         </locale>
 
