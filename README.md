@@ -11,9 +11,8 @@ Package name:
 
 Features
 --------
-- News-Listing
-- News-Entry
-- News RSS Feeds
+- News-Listing Sitetype
+- News-Entry Sitetype
 
 
 Installation
