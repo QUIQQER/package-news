@@ -8,15 +8,13 @@
             <locale group="quiqqer/quiqqer" var="package.description"/>
         </description>
 
-        <image src="URL_OPT_DIR/quiqqer/package-news/bin/images/Logo.jpg"/>
+        <image src="URL_OPT_DIR/quiqqer/news/bin/images/Logo.jpg"/>
 
-        <!--<preview>-->
-            <!--<image src="URL_OPT_DIR/quiqqer/quiqqer/bin/preview/1.png"/>-->
-            <!--<image src="URL_OPT_DIR/quiqqer/quiqqer/bin/preview/2.png"/>-->
-            <!--<image src="URL_OPT_DIR/quiqqer/quiqqer/bin/preview/3.png"/>-->
-            <!--<image src="URL_OPT_DIR/quiqqer/quiqqer/bin/preview/4.png"/>-->
-            <!--<image src="URL_OPT_DIR/quiqqer/quiqqer/bin/preview/5.png"/>-->
-        <!--</preview>-->
+        <preview>
+            <image src="URL_OPT_DIR/quiqqer/news/bin/preview/News_1.png"/>
+            <image src="URL_OPT_DIR/quiqqer/news/bin/preview/News_2.png"/>
+            <image src="URL_OPT_DIR/quiqqer/news/bin/preview/News_3.png"/>
+        </preview>
 
         <support>
             <email><![CDATA[support@pcsg.de]]></email>
