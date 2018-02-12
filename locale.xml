@@ -8,7 +8,7 @@
         </locale>
         <locale name="package.description" html="true">
             <de><![CDATA[News / Neuigkeiten Funktionalität für das QUIQQER System]]></de>
-            <en><![CDATA[News / News Functionality for the QUIQQER system]]></en>
+            <en><![CDATA[News for the QUIQQER system]]></en>
             <pl><![CDATA[<p>Za pomocą rozszerzenia &bdquo;News&ldquo; możesz w łatwy sposób stworzyć i zaprezentować listę artykułów</p>
 <p>Plugin dostarcza 2 nowe typy stron: listę newsów oraz wpis. Oprócz tego jest też możliwość dołączenia widgetu z listą newsów na dowolnej stronie.</p>]]></pl>
         </locale>

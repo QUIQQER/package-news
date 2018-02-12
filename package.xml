@@ -1,11 +1,11 @@
 <quiqqer>
     <package>
         <title>
-            <locale group="quiqqer/quiqqer" var="package.title"/>
+            <locale group="quiqqer/news" var="package.title"/>
         </title>
 
         <description>
-            <locale group="quiqqer/quiqqer" var="package.description"/>
+            <locale group="quiqqer/news" var="package.description"/>
         </description>
 
         <image src="URL_OPT_DIR/quiqqer/news/bin/images/Logo.jpg"/>
