@@ -11,9 +11,9 @@
         <image src="URL_OPT_DIR/quiqqer/news/bin/images/Logo.jpg"/>
 
         <preview>
-            <image src="URL_OPT_DIR/quiqqer/news/bin/images/preview/News_1.png"/>
-            <image src="URL_OPT_DIR/quiqqer/news/bin/images/preview/News_2.png"/>
-            <image src="URL_OPT_DIR/quiqqer/news/bin/images/preview/News_3.png"/>
+            <image src="URL_OPT_DIR/quiqqer/news/bin/images/preview/News_1.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/news/bin/images/preview/News_2.jpg"/>
+            <image src="URL_OPT_DIR/quiqqer/news/bin/images/preview/News_3.jpg"/>
         </preview>
 
         <support>
