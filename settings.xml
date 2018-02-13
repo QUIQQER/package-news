@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiqqer>
+    <settings>
+        <config name="plugins/quiqqer/news">
+            <section name="further_news">
+                <conf name="amount">
+                    <type><![CDATA[int]]></type>
+                    <defaultvalue>2</defaultvalue>
+                </conf>
+
+                <conf name="show_date">
+                    <type><![CDATA[boolean]]></type>
+                    <defaultvalue>1</defaultvalue>
+                </conf>
+
+                <conf name="show_time">
+                    <type><![CDATA[boolean]]></type>
+                    <defaultvalue>1</defaultvalue>
+                </conf>
+            </section>
+        </config>
+
+        <window name="quiqqer-news-settings">
+            <title>
+                <locale group="quiqqer/news" var="settings.title"/>
+            </title>
+            <params>
+                <icon>fa fa-newspaper-o</icon>
+            </params>
+
+            <categories>
+                <category name="news-entry" index="1">
+                    <text>
+                        <locale group="quiqqer/news" var="settings.entry.text"/>
+                    </text>
+                    <icon>fa fa-file-text</icon>
+
+                    <settings name="news-entry">
+                        <title>
+                            <locale group="quiqqer/news" var="settings.further_news.title"/>
+                        </title>
+                        <input conf="further_news.amount" type="number">
+                            <text>
+                                <locale group="quiqqer/news" var="settings.further_news.amount.text"/>
+                            </text>
+                            <description>
+                                <locale group="quiqqer/news" var="settings.further_news.amount.description"/>
+                            </description>
+                        </input>
+
+                        <input conf="further_news.show_date" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="settings.further_news.show_date.text"/>
+                            </text>
+                        </input>
+
+                        <input conf="further_news.show_time" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="settings.further_news.show_time.text"/>
+                            </text>
+                        </input>
+                    </settings>
+                </category>
+            </categories>
+        </window>
+    </settings>
+</quiqqer>

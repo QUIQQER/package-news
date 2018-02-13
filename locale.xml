@@ -125,6 +125,35 @@
             </locale>
 
 
+        <locale name="settings.title">
+            <de><![CDATA[Neuigkeiten]]></de>
+            <en><![CDATA[News]]></en>
+        </locale>
+
+        <locale name="settings.further_news.title">
+            <de><![CDATA[Weitere Neuigkeiten Einstellungen]]></de>
+            <en><![CDATA[Further News Settings]]></en>
+        </locale>
+
+        <locale name="settings.further_news.amount.text">
+            <de><![CDATA[Anzahl weiterer News]]></de>
+            <en><![CDATA[Amount of further news]]></en>
+        </locale>
+
+        <locale name="settings.further_news.amount.description">
+            <de><![CDATA[Die Anzahl weiterer Nachrichten, die unten auf der Seite vor und nach der aktuellen Nachricht angezeigt werden.]]></de>
+            <en><![CDATA[The amount of further news that are displayed on the bottom of the page before and after the current news article.]]></en>
+        </locale>
+
+        <locale name="settings.further_news.show_date.text">
+            <de><![CDATA[Datum vor der Neuigkeit anzeigen]]></de>
+            <en><![CDATA[Show date before the news title]]></en>
+        </locale>
+
+        <locale name="settings.further_news.show_time.text">
+            <de><![CDATA[Uhrzeit vor der Neuigkeit anzeigen]]></de>
+            <en><![CDATA[Show time before the news title]]></en>
+        </locale>
 
         <locale name="list.news.by">
             <de><![CDATA[von]]></de>
@@ -160,6 +189,10 @@
             <de><![CDATA[nächster Beitrag]]></de>
             <en><![CDATA[next newspost]]></en>
             <pl><![CDATA[poprzedni wpis]]></pl>
+        </locale>
+        <locale name="entry.news.nav.title">
+            <de><![CDATA[Weitere Neuigkeiten:]]></de>
+            <en><![CDATA[Further News:]]></en>
         </locale>
         <locale name="sheet.first.page">
             <de><![CDATA[Erste Seite]]></de>
