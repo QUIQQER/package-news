@@ -1,44 +1,41 @@
+![QUIQQER News](bin/images/Readme.jpg)
+
 QUIQQER News
 ========
+News functionality for the QUIQQER system
 
-News / Neuigkeiten Funktionalität für das QUIQQER System
-
-Packetname:
+Package name:
 
     quiqqer/news
 
 
 Features
 --------
+- News-Listing Sitetype
+- News-Entry Sitetype
 
-- Neuigkeiten-Liste
-- Neuigkeiten-Eintrag
-- Neuigkeiten RSS Feeds
 
 Installation
 ------------
+The package name is: `quiqqer/news`
 
-Der Paketname ist: quiqqer/news
 
 
-Mitwirken
+Contribute
 ----------
-
 - Issue Tracker: https://dev.quiqqer.com/quiqqer/package-news/issues
 - Source Code: https://dev.quiqqer.com/quiqqer/package-news/tree/master
+- Wiki: https://dev.quiqqer.com/quiqqer/package-news/wikis/home
 
 
 Support
 -------
-
-Falls Sie ein Fehler gefunden haben oder Verbesserungen wünschen,
-Dann können Sie gerne an support@pcsg.de eine E-Mail schreiben.
+If you found any flaws, have any wishes or suggestions you can send an email
+to [support@pcsg.de](mailto:support@pcsg.de) to inform us about your concerns. 
+We will try to respond to your request and forward it to the responsible developer.
 
 
 License
 -------
-
-- GPL-2.0+
-
-Entwickler
---------
+- PCSG QL-1.0
+- GPL-3.0+

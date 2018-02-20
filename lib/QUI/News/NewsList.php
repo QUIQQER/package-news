@@ -20,6 +20,7 @@ class NewsList
      *
      * @param integer $newId
      * @param \QUI\Projects\Site\Edit $Parent
+     * @throws QUi\Exception
      */
     public static function onChildCreate($newId, $Parent)
     {
@@ -34,5 +35,19 @@ class NewsList
         $Site->setAttribute('release_from', date('Y-m-d H:i:s'));
         $Site->setAttribute('type', 'quiqqer/news:types/news-entry');
         $Site->save();
+    }
+
+    /**
+     * @param QUI\Projects\Site\Edit $Site
+     */
+    public static function onSiteSaveBefore($Site)
+    {
+        if ($Site->getAttribute('type') !== 'quiqqer/news:types/news-list') {
+            return;
+        }
+
+        if ($Site->getAttribute('order') === false || $Site->getAttribute('order') === '') {
+            $Site->setAttribute('order_type', 'release_from DESC');
+        }
     }
 }

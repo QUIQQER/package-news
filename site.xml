@@ -13,8 +13,9 @@
                 <attribute default="childrenList">quiqqer.settings.news.template</attribute>
                 <attribute default="6">quiqqer.settings.news.max</attribute>
                 <attribute default="1">quiqqer.settings.news.showImages</attribute>
+                <attribute default="1">quiqqer.settings.news.showHeader</attribute>
                 <attribute default="1">quiqqer.settings.news.showShort</attribute>
-                <attribute default="1">quiqqer.settings.news.showCreator</attribute>
+                <attribute default="0">quiqqer.settings.news.showCreator</attribute>
                 <attribute default="1">quiqqer.settings.news.showDate</attribute>
                 <attribute default="0">quiqqer.settings.news.showTime</attribute>
             </attributes>
@@ -32,6 +33,9 @@
                             <text>
                                 <locale group="quiqqer/news" var="list.template" />
                             </text>
+                            <option value="cardRows">
+                                <locale group="quiqqer/sitetypes" var="list.template.cardRows"/>
+                            </option>
                             <option value="imageTop">
                                 <locale group="quiqqer/sitetypes" var="list.template.imageTop"/>
                             </option>
@@ -118,6 +122,48 @@
             <desc>
                 <locale group="quiqqer/intranet" var="admin.types.news.entry.desc" />
             </desc>
+
+            <!-- extra attributes -->
+            <attributes>
+                <attribute default="1">quiqqer.settings.news.entry.dateAndCreator</attribute>
+            </attributes>
+
+            <!-- entry settings -->
+            <settings>
+
+                <category name="news-list-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/news" var="quiqqer.news.entry.settings.title" />
+                        </title>
+
+                        <select conf="quiqqer.settings.news.entry.dateAndCreator">
+                            <text>
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator" />
+                            </text>
+
+                            <option value="showAll">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.showAll"/>
+                            </option>
+                            <option value="showCreator">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.showCreator"/>
+                            </option>
+                            <option value="showDate">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.showDate"/>
+                            </option>
+                            <option value="hide">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.hide"/>
+                            </option>
+                        </select>
+
+                    </settings>
+                </category>
+            </settings>
         </type>
     </types>
 

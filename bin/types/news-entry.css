@@ -15,6 +15,10 @@
     float: right;
 }
 
+.news-entry-date-and-author {
+    margin-bottom: 20px;
+}
+
 .news-entry aside {
     clear: both;
     float: left;
@@ -22,10 +26,34 @@
     margin-top: 30px;
 }
 
-.news-entry time {
-    clear: both;
-    float: left;
+.news-entry-time {
     font-size: 12px;
-    margin-bottom: 20px;
-    width: 100%;
+    display: block;
+}
+
+
+.news-entry-nav {
+    margin-top: 48px;
+}
+
+.news-entry-nav-title {
+    margin-bottom: 5px;
+}
+
+.news-entry-nav-list {
+    padding: 0;
+    list-style: none;
+}
+
+.news-entry-nav-list li {
+    padding: 0;
+    margin-bottom: 5px !important;
+}
+
+.news-entry-nav-active {
+    font-weight: bolder;
+}
+
+.news-entry-nav-bullet {
+    margin-right: 5px;
 }

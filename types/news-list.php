@@ -8,6 +8,7 @@ $ChildrenList = new QUI\Controls\ChildrenList(array(
     'showTitle'       => false,
     'showContent'     => false,
     'showImages'      => $Site->getAttribute('quiqqer.settings.news.showImages'),
+    'showHeader'       => $Site->getAttribute('quiqqer.settings.news.showHeader'),
     'showShort'       => $Site->getAttribute('quiqqer.settings.news.showShort'),
     'showCreator'     => $Site->getAttribute('quiqqer.settings.news.showCreator'),
     'showDate'        => $Site->getAttribute('quiqqer.settings.news.showDate'),
