@@ -7,14 +7,28 @@
             <pl><![CDATA[QUIQQER - News]]></pl>
         </locale>
         <locale name="package.description" html="true">
-            <de><![CDATA[News / Neuigkeiten Funktionalität für das QUIQQER System]]></de>
-            <en><![CDATA[News for the QUIQQER system]]></en>
+            <de><![CDATA[
+            The news-module expands QUIQQER with a news-system.
+            This allows you to create news and present them appealingly.
+            For this there are two sitetypes with many configuration options:
+            A type named "news-list" which lists news in many different ways and a type named "news entry"
+            which represents the actual news content.
+            ]]></de>
+            <en><![CDATA[
+            Mit dem News-Modul wird QUIQQER um ein News/Neuigkeiten-System erweitert.
+            Hiermit ist es möglich Neuigkeiten zu erstellen und diese ansprechend zu präsentieren.
+            Dazu werden zwei Seitentypen mit vielen Einstellungsmöglichkeiten mitgeliefert:
+            Einen Typ "News-Liste", der alle erstellten Neuigkeiten auf verschiedenste Arten präsentieren kann und einen Typ "News Eintrag",
+            mit dem die eigentliche Neuigkeit verfasst wird.
+            ]]></en>
             <pl><![CDATA[<p>Za pomocą rozszerzenia &bdquo;News&ldquo; możesz w łatwy sposób stworzyć i zaprezentować listę artykułów</p>
 <p>Plugin dostarcza 2 nowe typy stron: listę newsów oraz wpis. Oprócz tego jest też możliwość dołączenia widgetu z listą newsów na dowolnej stronie.</p>]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-entry.description">
-            <de><![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
-            <en><![CDATA[Create a new page to write a news entry. News entries will be displayed and listed underneath the news-list]]></en>
+            <de>
+                <![CDATA[Erstellen Sie eine neue Seite, um einen News-Eintrag zu verfassen. Die News-Einträge werden unter der News-Liste angezeigt und aufgelistet.]]></de>
+            <en>
+                <![CDATA[Create a new page to write a news entry. News entries will be displayed and listed underneath the news-list]]></en>
             <pl><![CDATA[&bdquo;News (wpis)&ldquo; służy do utworzenia artykułów i wpisów.]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-entry.title">
@@ -25,7 +39,8 @@
         <locale name="quiqqer/news:types/news-list.description">
             <de><![CDATA[Legen Sie eine Newsliste an. Alle darunter liegenden Seiten werden aufgelistet.]]></de>
             <en><![CDATA[Create a news-list. All child-sites beneath will be listed.]]></en>
-            <pl><![CDATA[Utworzenie nowej listy newsów. Wszystkie jej podstrony (typu news-wpis) zostaną wyświetlone..]]></pl>
+            <pl>
+                <![CDATA[Utworzenie nowej listy newsów. Wszystkie jej podstrony (typu news-wpis) zostaną wyświetlone..]]></pl>
         </locale>
         <locale name="quiqqer/news:types/news-list.title">
             <de><![CDATA[QUIQQER - Newsliste ]]></de>
@@ -64,33 +79,33 @@
             <pl><![CDATA[Lista newsów - ustawienia]]></pl>
         </locale>
 
-            <!-- max site -->
-            <locale name="quiqqer.news.list.settings.max">
-                <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
-                <en><![CDATA[Number of news posts per page]]></en>
-                <pl><![CDATA[Ile wpisów pokazać?]]></pl>
-            </locale>
+        <!-- max site -->
+        <locale name="quiqqer.news.list.settings.max">
+            <de><![CDATA[Anzahl Neuigkeiten pro Seite]]></de>
+            <en><![CDATA[Number of news posts per page]]></en>
+            <pl><![CDATA[Ile wpisów pokazać?]]></pl>
+        </locale>
 
-            <!-- News template -->
-            <locale name="list.template">
-                <de><![CDATA[Layout]]></de>
-                <en><![CDATA[Layout]]></en>
-                <pl><![CDATA[Layout]]></pl>
-            </locale>
+        <!-- News template -->
+        <locale name="list.template">
+            <de><![CDATA[Layout]]></de>
+            <en><![CDATA[Layout]]></en>
+            <pl><![CDATA[Layout]]></pl>
+        </locale>
 
-            <!-- show author -->
-            <locale name="list.showCreator">
-                <de><![CDATA[Autor anzeigen]]></de>
-                <en><![CDATA[Show author]]></en>
-                <pl><![CDATA[Pokaż autora]]></pl>
-            </locale>
+        <!-- show author -->
+        <locale name="list.showCreator">
+            <de><![CDATA[Autor anzeigen]]></de>
+            <en><![CDATA[Show author]]></en>
+            <pl><![CDATA[Pokaż autora]]></pl>
+        </locale>
 
-            <!-- show date -->
-            <locale name="list.showTime">
-                <de><![CDATA[Datum anzeigen]]></de>
-                <en><![CDATA[Show date]]></en>
-                <pl><![CDATA[Pokaż datę]]></pl>
-            </locale>
+        <!-- show date -->
+        <locale name="list.showTime">
+            <de><![CDATA[Datum anzeigen]]></de>
+            <en><![CDATA[Show date]]></en>
+            <pl><![CDATA[Pokaż datę]]></pl>
+        </locale>
 
         <!-- Site entry settings -->
         <locale name="quiqqer.news.entry.settings.title">
@@ -103,26 +118,26 @@
             <en><![CDATA[Author & date]]></en>
             <pl><![CDATA[Autor i data]]></pl>
         </locale>
-            <locale name="quiqqer.settings.news.entry.dateAndCreator.showAll">
-                <de><![CDATA[Autor und Datum anzeigen]]></de>
-                <en><![CDATA[Show author & date]]></en>
-                <pl><![CDATA[Pokaż autora i datę]]></pl>
-            </locale>
-            <locale name="quiqqer.settings.news.entry.dateAndCreator.showCreator">
-                <de><![CDATA[Nur Autor anzeigen]]></de>
-                <en><![CDATA[Show only author]]></en>
-                <pl><![CDATA[Pokaż tylko autora]]></pl>
-            </locale>
-            <locale name="quiqqer.settings.news.entry.dateAndCreator.showDate">
-                <de><![CDATA[Nur Datum anzeigen]]></de>
-                <en><![CDATA[Show only date]]></en>
-                <pl><![CDATA[Pokaż tylko datę]]></pl>
-            </locale>
-            <locale name="quiqqer.settings.news.entry.dateAndCreator.hide">
-                <de><![CDATA[Ausgeblendet]]></de>
-                <en><![CDATA[Hide]]></en>
-                <pl><![CDATA[Wyłącz]]></pl>
-            </locale>
+        <locale name="quiqqer.settings.news.entry.dateAndCreator.showAll">
+            <de><![CDATA[Autor und Datum anzeigen]]></de>
+            <en><![CDATA[Show author & date]]></en>
+            <pl><![CDATA[Pokaż autora i datę]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.news.entry.dateAndCreator.showCreator">
+            <de><![CDATA[Nur Autor anzeigen]]></de>
+            <en><![CDATA[Show only author]]></en>
+            <pl><![CDATA[Pokaż tylko autora]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.news.entry.dateAndCreator.showDate">
+            <de><![CDATA[Nur Datum anzeigen]]></de>
+            <en><![CDATA[Show only date]]></en>
+            <pl><![CDATA[Pokaż tylko datę]]></pl>
+        </locale>
+        <locale name="quiqqer.settings.news.entry.dateAndCreator.hide">
+            <de><![CDATA[Ausgeblendet]]></de>
+            <en><![CDATA[Hide]]></en>
+            <pl><![CDATA[Wyłącz]]></pl>
+        </locale>
 
 
         <locale name="settings.title">
@@ -141,8 +156,10 @@
         </locale>
 
         <locale name="settings.further_news.amount.description">
-            <de><![CDATA[Die Anzahl weiterer Nachrichten, die unten auf der Seite vor und nach der aktuellen Nachricht angezeigt werden.]]></de>
-            <en><![CDATA[The amount of further news that are displayed on the bottom of the page before and after the current news article.]]></en>
+            <de>
+                <![CDATA[Die Anzahl weiterer Nachrichten, die unten auf der Seite vor und nach der aktuellen Nachricht angezeigt werden.]]></de>
+            <en>
+                <![CDATA[The amount of further news that are displayed on the bottom of the page before and after the current news article.]]></en>
         </locale>
 
         <locale name="settings.further_news.show_date.text">
