@@ -8,18 +8,18 @@
         </locale>
         <locale name="package.description" html="true">
             <de><![CDATA[
-            The news-module expands QUIQQER with a news-system.
-            This allows you to create news and present them appealingly.
-            For this there are two sitetypes with many configuration options:
-            A type named "news-list" which lists news in many different ways and a type named "news entry"
-            which represents the actual news content.
-            ]]></de>
-            <en><![CDATA[
             Mit dem News-Modul wird QUIQQER um ein News/Neuigkeiten-System erweitert.
             Hiermit ist es möglich Neuigkeiten zu erstellen und diese ansprechend zu präsentieren.
             Dazu werden zwei Seitentypen mit vielen Einstellungsmöglichkeiten mitgeliefert:
             Einen Typ "News-Liste", der alle erstellten Neuigkeiten auf verschiedenste Arten präsentieren kann und einen Typ "News Eintrag",
             mit dem die eigentliche Neuigkeit verfasst wird.
+            ]]></de>
+            <en><![CDATA[
+            The news-module expands QUIQQER with a news-system.
+            This allows you to create news and present them appealingly.
+            For this there are two sitetypes with many configuration options:
+            A type named "news-list" which lists news in many different ways and a type named "news entry"
+            which represents the actual news content.
             ]]></en>
             <pl><![CDATA[<p>Za pomocą rozszerzenia &bdquo;News&ldquo; możesz w łatwy sposób stworzyć i zaprezentować listę artykułów</p>
 <p>Plugin dostarcza 2 nowe typy stron: listę newsów oraz wpis. Oprócz tego jest też możliwość dołączenia widgetu z listą newsów na dowolnej stronie.</p>]]></pl>
