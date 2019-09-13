@@ -25,10 +25,10 @@ switch ($Site->getAttribute('quiqqer.settings.news.entry.dateAndCreator')) {
 
 
 // Reverse since the sorting/ordering in previous siblings is reversed
-$previousSiblings = array_reverse($Site->previousSiblings($amountOfSiblings));
-$nextSiblings = $Site->nextSiblings($amountOfSiblings);
+$previousSiblings = \array_reverse($Site->previousSiblings($amountOfSiblings));
+$nextSiblings     = $Site->nextSiblings($amountOfSiblings);
 
-$Engine->assign(array(
+$Engine->assign([
     'enableDateAndCreator' => $enableDateAndCreator,
     'showCreator'          => $showCreator,
     'showDate'             => $showDate,
@@ -36,4 +36,4 @@ $Engine->assign(array(
     'showFurtherNewsTime'  => $showFurtherNewsTime,
     'previousSiblings'     => $previousSiblings,
     'nextSiblings'         => $nextSiblings,
-));
+]);
