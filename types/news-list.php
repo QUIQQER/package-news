@@ -3,7 +3,7 @@
 if (isset($_REQUEST['sheet'])
     && \is_numeric($_REQUEST['sheet'])
     && (int)$_REQUEST['sheet'] > 1) {
-    QUI::getRewrite()->getSite()->setAttribute('meta.robots', 'noindex,follow');
+    $Site->setAttribute('meta.robots', 'noindex,follow');
 }
 
 /**
