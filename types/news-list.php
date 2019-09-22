@@ -47,7 +47,6 @@ $ChildrenList->addEvent('onMetaList', function (
     // author
     $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
     $MetaList->add('author', $User->getName());
-    $MetaList->add('publisher', $User->getName());
 
     // image
     $image = $Site->getAttribute('image_site');
