@@ -11,7 +11,7 @@
     <meta itemprop="datePublished" content="{$date|date_format:'c'}"/>
     <meta itemprop="headline" content="{$Site->getAttribute('title')}"/>
     <meta itemprop="author" content="{$User->getname()}"/>
-    <meta itemprop="image_site" content="{image src=$Site->getAttribute('image_site') onlysrc=true}"/>
+    <meta itemprop="image" content="{image src=$Site->getAttribute('image_site') onlysrc=true}"/>
 
     {if $enableDateAndCreator}
     <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
