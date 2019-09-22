@@ -1,20 +1,23 @@
-{if $Site->getAttribute('release_from') &&
-    $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
-    {assign var=date value=$Site->getAttribute('release_from')}
+{if $Site->getAttribute('release_from') && $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
+{assign var=date value=$Site->getAttribute('release_from')}
 {else}
-    {assign var=date value=$Site->getAttribute('c_date')}
+{assign var=date value=$Site->getAttribute('c_date')}
 {/if}
 
 <article class="news-entry quiqqer-news-entry grid-100 mobile-grid-100 grid-parent content-body"
          itemscope itemtype="http://schema.org/NewsArticle"
 >
+    {user id=$Site->getAttribute('c_user') var=User}
+    <meta itemprop="datePublished" content="{$date|date_format:'c'}"/>
+    <meta itemprop="headline" content="{$Site->getAttribute('title')}"/>
+    <meta itemprop="author" content="{$User->getname()}"/>
+    <meta itemprop="image_site" content="{image src=$Site->getAttribute('image_site') onlysrc=true}"/>
 
     {if $enableDateAndCreator}
     <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
         {if $showCreator}
-            {user id=$Site->getAttribute('c_user') var=User}
-            {t}quiqqer/news entry.news.by{/t}
-            <span class="news-entry-author">
+        {t}quiqqer/news entry.news.by{/t}
+        <span class="news-entry-author">
                 {if $User->getId() && $User->getAttribute('firstname')}
                     {$User->getAttribute('firstname')}
                 {else if $User->getId()}
@@ -24,11 +27,9 @@
         {/if}
 
         {if $showDate}
-            <span class="news-entry-time">
+        <span class="news-entry-time">
                 {t}quiqqer/news entry.news.on{/t}
-                <time datetime="{$date|date_format:"c"}"
-                      itemprop="datePublished"
-                >
+                <time datetime="{$date|date_format:'c'}">
                     {locale_date date=$date}
                 </time>
             </span>
@@ -37,15 +38,12 @@
     {/if}
 
     {if $Site->getAttribute('content')}
-    <section class="news-entry-content grid-100 mobile-grid-100 grid-parent"
-             itemprop="articleBody"
-    >
+    <section class="news-entry-content grid-100 mobile-grid-100 grid-parent" itemprop="articleBody">
         {$Site->getAttribute('content')}
     </section>
     {/if}
 
-
-    <hr>
+    <hr/>
 
     <section class="news-entry-nav">
         <div class="news-entry-nav-title">
@@ -55,15 +53,15 @@
             {foreach from=$previousSiblings item=prevSibling}
             <li>
                 <a href="{url site=$prevSibling}"
-                   title="{$prevSibling->getAttribute('title')|escape:"html"}"
+                   title="{$prevSibling->getAttribute('title')|escape:'html'}"
                 >
                     <i class="fa fa-angle-right news-entry-nav-bullet"></i>
                     {if $showFurtherNewsDate}
-                        {locale_date date=$prevSibling->getAttribute('release_from')} –
+                    {locale_date date=$prevSibling->getAttribute('release_from')} –
                     {/if}
 
                     {if $showFurtherNewsTime}
-                        {$prevSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                    {$prevSibling->getAttribute('release_from')|date_format:"%H:%M"}:
                     {/if}
 
                     {$prevSibling->getAttribute('title')}
@@ -74,11 +72,11 @@
             <li class="news-entry-nav-active">
                 <i class="fa fa-angle-right news-entry-nav-bullet"></i>
                 {if $showFurtherNewsDate}
-                    {locale_date date=$Site->getAttribute('release_from')} –
+                {locale_date date=$Site->getAttribute('release_from')} –
                 {/if}
 
                 {if $showFurtherNewsTime}
-                    {$Site->getAttribute('release_from')|date_format:"%H:%M"}:
+                {$Site->getAttribute('release_from')|date_format:"%H:%M"}:
                 {/if}
 
                 {$Site->getAttribute('title')}
@@ -87,15 +85,15 @@
             {foreach from=$nextSiblings item=nextSibling}
             <li>
                 <a href="{url site=$nextSibling}"
-                   title="{$nextSibling->getAttribute('title')|escape:"html"}"
+                   title="{$nextSibling->getAttribute('title')|escape:'html'}"
                 >
                     <i class="fa fa-angle-right news-entry-nav-bullet"></i>
                     {if $showFurtherNewsDate}
-                      {locale_date date=$nextSibling->getAttribute('release_from')} –
+                    {locale_date date=$nextSibling->getAttribute('release_from')} –
                     {/if}
 
                     {if $showFurtherNewsTime}
-                     {$nextSibling->getAttribute('release_from')|date_format:"%H:%M"}:
+                    {$nextSibling->getAttribute('release_from')|date_format:"%H:%M"}:
                     {/if}
 
                     {$nextSibling->getAttribute('title')}
