@@ -44,6 +44,7 @@ $ChildrenList->addEvent('onMetaList', function (
     $MetaList->add('headline', $Site->getAttribute('title'));
     $MetaList->add('datePublished', $Site->getAttribute('release_from'));
     $MetaList->add('dateModified', $Site->getAttribute('e_date'));
+    $MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
 
     // author
     $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
