@@ -43,33 +43,16 @@ $ChildrenList->addEvent('onMetaList', function (
 ) {
     $MetaList->add('headline', $Site->getAttribute('title'));
     $MetaList->add('datePublished', $Site->getAttribute('release_from'));
+    $MetaList->add('dateModified', $Site->getAttribute('e_date'));
 
     // author
     $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
     $MetaList->add('author', $User->getName());
 
     // publisher
-    $Project       = $Site->getProject();
-    $publisher     = $Project->getConfig('publisher');
-    $publisherType = $Project->getConfig('publisher_type');
-
-    if (empty($publisher)) {
-        $publisher = $User->getName();
-    }
-
-    $publisher = \htmlspecialchars($publisher);
-    $itemType  = 'https://schema.org/Organization';
-
-    if ($publisherType === 'person') {
-        $itemType = 'https://schema.org/Person';
-    }
-
-    $MetaList->add('publisher', [
-        'nodeName'  => 'div',
-        'itemscope' => '',
-        'itemtype'  => $itemType,
-        'html'      => '<meta itemprop="name" content="'.$publisher.'">'
-    ]);
+    $Publisher = new QUI\Controls\Utils\MetaList\Publisher();
+    $Publisher->importFromProject($Site->getProject());
+    $MetaList->add('publisher', $Publisher);
 
     // image
     $image = $Site->getAttribute('image_site');
