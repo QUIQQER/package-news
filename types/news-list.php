@@ -48,6 +48,29 @@ $ChildrenList->addEvent('onMetaList', function (
     $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
     $MetaList->add('author', $User->getName());
 
+    // publisher
+    $Project       = $Site->getProject();
+    $publisher     = $Project->getConfig('publisher');
+    $publisherType = $Project->getConfig('publisher_type');
+
+    if (empty($publisher)) {
+        $publisher = $User->getName();
+    }
+
+    $publisher = \htmlspecialchars($publisher);
+    $itemType  = 'https://schema.org/Organization';
+
+    if ($publisherType === 'person') {
+        $itemType = 'https://schema.org/Person';
+    }
+
+    $MetaList->add('publisher', [
+        'nodeName'  => 'div',
+        'itemscope' => '',
+        'itemtype'  => $itemType,
+        'html'      => '<meta itemprop="name" content="'.$publisher.'">'
+    ]);
+
     // image
     $image = $Site->getAttribute('image_site');
 
