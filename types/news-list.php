@@ -67,6 +67,14 @@ $ChildrenList->addEvent('onMetaList', function (
         $image = $Image->getSizeCacheUrl();
     }
 
+    // use default
+    if (empty($image)) {
+        try {
+            $image = $Site->getProject()->getMedia()->getPlaceholderImage()->getSizeCacheUrl();
+        } catch (QUI\Exception $Exception) {
+        }
+    }
+
     $MetaList->add('image', $image);
 });
 
