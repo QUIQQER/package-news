@@ -1,30 +1,29 @@
 {
-  "name": "quiqqer/news",
-  "type": "quiqqer-module",
-  "description": "News / News Functionality for the QUIQQER system",
-  "version": "dev-dev",
-  "license": [
-    "GPL-3.0+",
-    "PCSG QL-1.0"
-  ],
-  "authors": [
-    {
-      "name": "Henning Leutz",
-      "email": "leutz@pcsg.de",
-      "homepage": "http://www.pcsg.de",
-      "role": "Developer"
+    "name": "quiqqer\/news",
+    "type": "quiqqer-module",
+    "description": "News \/ News Functionality for the QUIQQER system",
+    "license": [
+        "GPL-3.0+",
+        "PCSG QL-1.0"
+    ],
+    "authors": [
+        {
+            "name": "Henning Leutz",
+            "email": "leutz@pcsg.de",
+            "homepage": "http:\/\/www.pcsg.de",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@pcsg.de"
+    },
+    "require": {
+        "quiqqer\/quiqqer": "*@dev",
+        "quiqqer\/controls": ">=1.2.2|dev-master|dev-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "QUI": "lib\/"
+        }
     }
-  ],
-  "support": {
-    "email": "support@pcsg.de"
-  },
-  "require": {
-    "quiqqer/quiqqer": "*@dev",
-    "quiqqer/controls": ">=1.2.2|dev-master|dev-dev"
-  },
-  "autoload": {
-    "psr-0": {
-      "QUI": "lib/"
-    }
-  }
 }
