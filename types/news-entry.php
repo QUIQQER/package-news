@@ -59,7 +59,11 @@ if (MediaUtils::isMediaUrl($image)) {
 // use default
 if (empty($image)) {
     try {
-        $image = $Site->getProject()->getMedia()->getPlaceholderImage()->getSizeCacheUrl();
+        $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
+
+        if ($Placeholder) {
+            $image = $Placeholder->getSizeCacheUrl();
+        }
     } catch (QUI\Exception $Exception) {
     }
 }
