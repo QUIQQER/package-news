@@ -30,7 +30,7 @@ class Author extends QUI\Control
             'template' => 'largeImageTop' // template
         ]);
 
-        $this->addCSSFile(dirname(__FILE__).'/Author.css');
+        $this->addCSSFile(dirname(__FILE__) . '/Author.css');
 
         parent::__construct($attributes);
     }
@@ -84,9 +84,9 @@ class Author extends QUI\Control
             'shortDesc'      => false // todo implement user short description
         ]);
 
-        $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__).$html));
+        $Engine->assign('controlTemplate', $Engine->fetch(dirname(__FILE__) . $html));
 
-        return $Engine->fetch(dirname(__FILE__).'/Author.html');
+        return $Engine->fetch(dirname(__FILE__) . '/Author.html');
     }
 
     /**
