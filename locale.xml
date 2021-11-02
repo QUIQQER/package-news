@@ -47,6 +47,17 @@
             <en><![CDATA[QUIQQER - News-List]]></en>
             <pl><![CDATA[QUIQQER - Lista newsów]]></pl>
         </locale>
+
+        <!-- author brick -->
+        <locale name="brick.author.title">
+            <de><![CDATA[Nachrichten: Autor]]></de>
+            <en><![CDATA[News: Author]]></en>
+        </locale>
+        <locale name="brick.author.description">
+            <de><![CDATA[Zeigt den Autor des Nachrichtenbeitrags an. Wird der Baustein nicht auf einer Seite vom Typ "Nachrichtenbeitrag" platziert, wird kein Autor angezeigt.]]></de>
+            <en><![CDATA[Shows the author of the news post. If the brick is not placed on a page of type "News post", no author is displayed.]]></en>
+        </locale>
+
     </groups>
 
     <groups name="quiqqer/news" datatype="php">

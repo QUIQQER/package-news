@@ -163,6 +163,24 @@
 
                     </settings>
                 </category>
+
+                <category name="news-list-author-settings">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/news" var="author.entry.settings.title" />
+                        </title>
+
+                        <input conf="quiqqer.settings.news.entry.guestAuthor.enable" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable.description" />
+                            </description>
+                        </input>
+
+                    </settings>
+                </category>
             </settings>
         </type>
     </types>
