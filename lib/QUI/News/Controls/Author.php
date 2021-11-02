@@ -30,7 +30,7 @@ class Author extends QUI\Control
             'template' => 'largeImageTop' // template
         ]);
 
-//        $this->addCSSFile(dirname(__FILE__).'/Author.css');
+        $this->addCSSFile(dirname(__FILE__).'/Author.css');
 
         parent::__construct($attributes);
     }

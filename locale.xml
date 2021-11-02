@@ -57,6 +57,22 @@
             <de><![CDATA[Zeigt den Autor des Nachrichtenbeitrags an. Wird der Baustein nicht auf einer Seite vom Typ "Nachrichtenbeitrag" platziert, wird kein Autor angezeigt.]]></de>
             <en><![CDATA[Shows the author of the news post. If the brick is not placed on a page of type "News post", no author is displayed.]]></en>
         </locale>
+        <locale name="brick.setting.author.template">
+            <de><![CDATA[Vorlage]]></de>
+            <en><![CDATA[Template]]></en>
+        </locale>
+        <locale name="brick.setting.author.template.largeImageTop">
+            <de><![CDATA[Großes Bild oben]]></de>
+            <en><![CDATA[Large image on top]]></en>
+        </locale>
+        <locale name="brick.setting.author.template.largeImageLeft">
+            <de><![CDATA[Großes Bild links]]></de>
+            <en><![CDATA[Large image on left]]></en>
+        </locale>
+        <locale name="brick.setting.author.template.smallImageLeft">
+            <de><![CDATA[Kleines Bild links]]></de>
+            <en><![CDATA[Small image on left]]></en>
+        </locale>
 
     </groups>
 
