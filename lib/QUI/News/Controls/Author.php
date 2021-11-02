@@ -26,7 +26,7 @@ class Author extends QUI\Control
     {
         // default options
         $this->setAttributes([
-            'class'    => 'quiqqer-blog-control-author',
+            'class'    => 'quiqqer-news-control-author',
             'template' => 'largeImageTop' // template
         ]);
 
@@ -75,6 +75,8 @@ class Author extends QUI\Control
             ];
         }
 
+        echo $authorData['name'] . ' ' . $authorData['imageUrl'];
+
         $Engine->assign([
             'this'           => $this,
             'authorName'     => $authorData['name'],
@@ -88,7 +90,7 @@ class Author extends QUI\Control
     }
 
     /**
-     * Get author data for blog entry
+     * Get author data for news entry
      *
      * @return array|bool
      *  'name'     => string
@@ -101,7 +103,7 @@ class Author extends QUI\Control
     {
         $Site = $this->getSite();
 
-        if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.enable')) {
+        if ($Site->getAttribute('quiqqer.settings.news.guestAuthor.enable')) {
             $data = $this->getGuestAuthorData();
 
             if ($data) {
@@ -134,8 +136,8 @@ class Author extends QUI\Control
     {
         $Site = $this->getSite();
 
-        if ($Site->getAttribute('quiqqer.settings.blog.guestAuthor.quiqqerUser')) {
-            $QuiqqerUser = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.blog.guestAuthor.quiqqerUser'));
+        if ($Site->getAttribute('quiqqer.settings.news.guestAuthor.quiqqerUser')) {
+            $QuiqqerUser = QUI::getUsers()->get($Site->getAttribute('quiqqer.settings.news.guestAuthor.quiqqerUser'));
 
             try {
                 return [
@@ -147,8 +149,8 @@ class Author extends QUI\Control
             }
         }
 
-        $name = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.name');
-        $src  = $Site->getAttribute('quiqqer.settings.blog.guestAuthor.avatar');
+        $name = $Site->getAttribute('quiqqer.settings.news.guestAuthor.name');
+        $src  = $Site->getAttribute('quiqqer.settings.news.guestAuthor.avatar');
 
         if (!$name) {
             return false;
