@@ -74,6 +74,36 @@
             <en><![CDATA[Small image on left]]></en>
         </locale>
 
+        <!-- site author -->
+        <locale name="site.settings.guestAuthor.title">
+            <de><![CDATA[Gastautor]]></de>
+            <en><![CDATA[Guest author]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.enable">
+            <de><![CDATA[Gastautor verwenden]]></de>
+            <en><![CDATA[Use guest author]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.enable.description">
+            <de><![CDATA[Wenn die Option aktiviert ist, wird der Gastautor als der Blogeintrag-Autor angezeigt.]]></de>
+            <en><![CDATA[If the option is enabled, the guest author will be displayed as the blog entry author.]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.quiqqerUser">
+            <de><![CDATA[Benutzer (falls im System existeirt)]]></de>
+            <en><![CDATA[User (if exists in the system)]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.quiqqerUser.description">
+            <de><![CDATA[Wenn kein Benutzer im System existeirt, dann bitte unten die Einstellungen "Name" und "Benutezrbild" korrekt setzen.]]></de>
+            <en><![CDATA[If no user exists in the system, then please set the "Name" and "User image" settings correctly below.]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.name">
+            <de><![CDATA[Name]]></de>
+            <en><![CDATA[Name]]></en>
+        </locale>
+        <locale name="site.settings.guestAuthor.avatar">
+            <de><![CDATA[Benutezrbild]]></de>
+            <en><![CDATA[User image]]></en>
+        </locale>
+
     </groups>
 
     <groups name="quiqqer/news" datatype="php">

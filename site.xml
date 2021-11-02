@@ -125,7 +125,11 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute default="1">quiqqer.settings.news.entry.dateAndCreator</attribute>
+                <attribute default="1">quiqqer.settings.news.dateAndCreator</attribute>
+                <attribute default="">quiqqer.settings.news.guestAuthor.enable</attribute>
+                <attribute default="">quiqqer.settings.news.guestAuthor.quiqqerUser</attribute>
+                <attribute default="">quiqqer.settings.news.guestAuthor.name</attribute>
+                <attribute default="">quiqqer.settings.news.guestAuthor.avatar</attribute>
             </attributes>
 
             <!-- entry settings -->
@@ -167,16 +171,37 @@
                 <category name="news-list-author-settings">
                     <settings>
                         <title>
-                            <locale group="quiqqer/news" var="author.entry.settings.title" />
+                            <locale group="quiqqer/news" var="site.settings.guestAuthor.title" />
                         </title>
 
-                        <input conf="quiqqer.settings.news.entry.guestAuthor.enable" type="checkbox">
+                        <input conf="quiqqer.settings.news.guestAuthor.enable" type="checkbox">
                             <text>
-                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable" />
+                                <locale group="quiqqer/news" var="site.settings.guestAuthor.enable" />
                             </text>
                             <description>
-                                <locale group="quiqqer/blog" var="site.settings.entry.guestAuthor.enable.description" />
+                                <locale group="quiqqer/news" var="site.settings.guestAuthor.enable.description" />
                             </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.guestAuthor.quiqqerUser" type="text" data-qui="controls/users/Input" data-qui-options-max="1">
+                            <text>
+                                <locale group="quiqqer/news" var="site.settings.guestAuthor.quiqqerUser" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/news" var="site.settings.guestAuthor.quiqqerUser.description" />
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.guestAuthor.name" type="text">
+                            <text>
+                                <locale group="quiqqer/news" var="site.settings.guestAuthor.name" />
+                            </text>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.guestAuthor.avatar" type="text" class="media-image">
+                            <text>
+                                <locale group="quiqqer/news" var="site.settings.guestAuthor.avatar" />
+                            </text>
                         </input>
 
                     </settings>
