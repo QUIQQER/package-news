@@ -74,9 +74,7 @@ class Author extends QUI\Control
                 'imageUrl' => false
             ];
         }
-
-        echo $authorData['name'] . ' ' . $authorData['imageUrl'];
-
+        
         $Engine->assign([
             'this'           => $this,
             'authorName'     => $authorData['name'],
