@@ -82,5 +82,6 @@ $Engine->assign([
     'showFurtherNewsTime'  => $showFurtherNewsTime,
     'previousSiblings'     => $previousSiblings,
     'nextSiblings'         => $nextSiblings,
-    'MetaList'             => $MetaList
+    'MetaList'             => $MetaList,
+    'author'               => $User->getName()
 ]);

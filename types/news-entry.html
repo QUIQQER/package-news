@@ -12,14 +12,8 @@
     {if $enableDateAndCreator}
     <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
         {if $showCreator}
-        {t}quiqqer/news entry.news.by{/t}
-        <span class="news-entry-author">
-                {if $User->getId() && $User->getAttribute('firstname')}
-                    {$User->getAttribute('firstname')}
-                {else if $User->getId()}
-                    {$User->getname()}
-                {/if}
-            </span>
+            {t}quiqqer/news entry.news.by{/t}
+            <span class="news-entry-author">{$author}</span>
         {/if}
 
         {if $showDate}
