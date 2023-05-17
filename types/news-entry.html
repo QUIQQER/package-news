@@ -11,7 +11,7 @@
 
     {if $enableDateAndCreator}
     <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
-        {if $showCreator}
+        {if $author && $showCreator}
             {t}quiqqer/news entry.news.by{/t}
             <span class="news-entry-author">{$author}</span>
         {/if}
