@@ -45,9 +45,13 @@ $ChildrenList->addEvent('onMetaList', function (
     $MetaList->add('dateModified', $Site->getAttribute('e_date'));
     $MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
 
-    // author
-    $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
-    $MetaList->add('author', $User->getName());
+    try {
+        // author
+        $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $MetaList->add('author', $User->getName());
+    } catch (QUI\Exception $Exception) {
+        QUI\System\Log::writeException($Exception);
+    }
 
     // publisher
     $Publisher = new QUI\Controls\Utils\MetaList\Publisher();
@@ -62,8 +66,13 @@ $ChildrenList->addEvent('onMetaList', function (
     }
 
     if (MediaUtils::isMediaUrl($image)) {
-        $Image = MediaUtils::getImageByUrl($image);
-        $image = $Image->getSizeCacheUrl();
+        try {
+            $Image = MediaUtils::getImageByUrl($image);
+            $image = $Image->getSizeCacheUrl();
+        } catch (QUI\Exception $Exception) {
+            QUI\System\Log::writeException($Exception);
+            $image = '';
+        }
     }
 
     // use default
