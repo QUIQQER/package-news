@@ -2,7 +2,7 @@
     "name": "quiqqer\/news",
     "type": "quiqqer-module",
     "description": "News \/ News Functionality for the QUIQQER system",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "license": [
         "GPL-3.0+",
         "PCSG QL-1.0"
