@@ -8,5 +8,4 @@ namespace QUI\News;
  */
 class Entry
 {
-
 }

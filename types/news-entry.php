@@ -6,10 +6,10 @@ $Config = QUI::getPackage('quiqqer/news')->getConfig();
 
 // default
 $enableDateAndCreator = true;
-$showCreator          = true;
-$showDate             = true;
+$showCreator = true;
+$showDate = true;
 
-$amountOfSiblings    = $Config->getValue('further_news', 'amount');
+$amountOfSiblings = $Config->getValue('further_news', 'amount');
 $showFurtherNewsDate = $Config->getValue('further_news', 'show_date');
 $showFurtherNewsTime = $Config->getValue('further_news', 'show_time');
 
@@ -78,16 +78,16 @@ $MetaList->add('image', $image);
 
 // Reverse since the sorting/ordering in previous siblings is reversed
 $previousSiblings = \array_reverse($Site->previousSiblings($amountOfSiblings));
-$nextSiblings     = $Site->nextSiblings($amountOfSiblings);
+$nextSiblings = $Site->nextSiblings($amountOfSiblings);
 
 $Engine->assign([
     'enableDateAndCreator' => $enableDateAndCreator,
-    'showCreator'          => $showCreator,
-    'showDate'             => $showDate,
-    'showFurtherNewsDate'  => $showFurtherNewsDate,
-    'showFurtherNewsTime'  => $showFurtherNewsTime,
-    'previousSiblings'     => $previousSiblings,
-    'nextSiblings'         => $nextSiblings,
-    'MetaList'             => $MetaList,
-    'author'               => $author
+    'showCreator' => $showCreator,
+    'showDate' => $showDate,
+    'showFurtherNewsDate' => $showFurtherNewsDate,
+    'showFurtherNewsTime' => $showFurtherNewsTime,
+    'previousSiblings' => $previousSiblings,
+    'nextSiblings' => $nextSiblings,
+    'MetaList' => $MetaList,
+    'author' => $author
 ]);
