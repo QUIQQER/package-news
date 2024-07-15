@@ -11,6 +11,10 @@ use QUI\Projects\Media\Utils as MediaUtils;
 
 $Config = QUI::getPackage('quiqqer/news')->getConfig();
 
+if (! $Config instanceof \QUI\Config) {
+    throw new \QUI\Exception('Could not load quiqqer/news config');
+}
+
 // default
 $enableDateAndCreator = true;
 $showCreator = true;
@@ -41,7 +45,18 @@ $MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
 
 try {
     // author
-    $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
+    $UserManager = QUI::getUsers();
+
+    if ($UserManager === null) {
+        throw new \QUI\Exception('Could not get user manager');
+    }
+
+    $User = $UserManager->get($Site->getAttribute('c_user'));
+
+    if (!$User instanceof \QUI\Interfaces\Users\User) {
+        throw new \QUI\Exception('Could not get user object');
+    }
+
     $MetaList->add('author', $User->getName());
     $author = $User->getName();
 } catch (QUI\Exception $Exception) {

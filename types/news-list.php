@@ -52,7 +52,18 @@ $ChildrenList->addEvent('onMetaList', function (
 
     try {
         // author
-        $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
+        $UserManager = QUI::getUsers();
+
+        if ($UserManager === null) {
+            throw new \QUI\Exception('Could not load UserManager');
+        }
+
+        $User = $UserManager->get($Site->getAttribute('c_user'));
+
+        if (! $User instanceof \QUI\Interfaces\Users\User) {
+            throw new \QUI\Exception('Could not load user');
+        }
+
         $MetaList->add('author', $User->getName());
     } catch (QUI\Exception $Exception) {
         QUI\System\Log::writeException($Exception);
