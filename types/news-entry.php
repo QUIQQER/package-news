@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Declare "global" variables for PHPStan and IDEs
+ *
+ * @var \QUI\Interfaces\Projects\Site $Site
+ * @var \QUI\Interfaces\Template\EngineInterface $Engine
+ */
+
 use QUI\Projects\Media\Utils as MediaUtils;
 
 $Config = QUI::getPackage('quiqqer/news')->getConfig();
