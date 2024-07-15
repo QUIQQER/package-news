@@ -19,7 +19,7 @@
     },
     "require": {
         "quiqqer/core": "^2",
-        "quiqqer/controls": "^1.2.2"
+        "quiqqer/controls": "^2"
     },
     "autoload": {
         "psr-0": {
