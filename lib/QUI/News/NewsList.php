@@ -22,7 +22,7 @@ class NewsList
      * @param \QUI\Projects\Site\Edit $Parent
      * @throws QUi\Exception
      */
-    public static function onChildCreate($newId, $Parent)
+    public static function onChildCreate($newId, $Parent): void
     {
         if ($Parent->getAttribute('type') !== 'quiqqer/news:types/news-list') {
             return;
@@ -40,7 +40,7 @@ class NewsList
     /**
      * @param QUI\Projects\Site\Edit $Site
      */
-    public static function onSiteSaveBefore($Site)
+    public static function onSiteSaveBefore($Site): void
     {
         if ($Site->getAttribute('type') !== 'quiqqer/news:types/news-list') {
             return;
