@@ -1,11 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Parameter \\#2 \\$val of method QUI\\\\QDOM\\:\\:setAttribute\\(\\) expects array\\|bool\\|object\\|string, int given\\.$#"
-			count: 1
-			path: lib/QUI/News/NewsList.php
-
-		-
 			message: "#^Parameter \\#1 \\$no of method QUI\\\\Interfaces\\\\Projects\\\\Site\\:\\:nextSiblings\\(\\) expects int, array\\|bool\\|string given\\.$#"
 			count: 1
 			path: types/news-entry.php
@@ -14,18 +9,3 @@ parameters:
 			message: "#^Parameter \\#1 \\$no of method QUI\\\\Interfaces\\\\Projects\\\\Site\\:\\:previousSiblings\\(\\) expects int, array\\|bool\\|string given\\.$#"
 			count: 1
 			path: types/news-entry.php
-
-		-
-			message: "#^Parameter \\#2 \\$attributes of method QUI\\\\Controls\\\\Utils\\\\MetaList\\:\\:add\\(\\) expects array\\|object, string given\\.$#"
-			count: 1
-			path: types/news-entry.php
-
-		-
-			message: "#^Parameter \\#2 \\$attributes of method QUI\\\\Controls\\\\Utils\\\\MetaList\\:\\:add\\(\\) expects array\\|object, string given\\.$#"
-			count: 1
-			path: types/news-list.php
-
-		-
-			message: "#^Parameter \\#2 \\$fn of method QUI\\\\Control\\:\\:addEvent\\(\\) expects QUI\\\\callback, Closure given\\.$#"
-			count: 1
-			path: types/news-list.php

@@ -45,17 +45,7 @@ $MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
 
 try {
     // author
-    $UserManager = QUI::getUsers();
-
-    if ($UserManager === null) {
-        throw new \QUI\Exception('Could not get user manager');
-    }
-
-    $User = $UserManager->get($Site->getAttribute('c_user'));
-
-    if (!$User instanceof \QUI\Interfaces\Users\User) {
-        throw new \QUI\Exception('Could not get user object');
-    }
+    $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
 
     $MetaList->add('author', $User->getName());
     $author = $User->getName();
