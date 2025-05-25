@@ -7,6 +7,9 @@
  * @var \QUI\Interfaces\Template\EngineInterface $Engine
  */
 
+/** @var QUI\Template $Template */
+
+
 use QUI\Projects\Media\Utils as MediaUtils;
 
 $Config = QUI::getPackage('quiqqer/news')->getConfig();
@@ -38,15 +41,16 @@ switch ($Site->getAttribute('quiqqer.settings.news.entry.dateAndCreator')) {
 
 // Meta
 $MetaList = new QUI\Controls\Utils\MetaList();
+$MetaList->add('type', 'NewsArticle');
 $MetaList->add('headline', $Site->getAttribute('title'));
+$MetaList->add('description', $Site->getAttribute('short'));
 $MetaList->add('datePublished', $Site->getAttribute('release_from'));
 $MetaList->add('dateModified', $Site->getAttribute('e_date'));
-$MetaList->add('mainEntityOfPage', $Site->getUrlRewritten());
+$MetaList->add('mainEntityOfPage', $Site->getUrlRewrittenWithHost());
 
 try {
     // author
     $User = QUI::getUsers()->get($Site->getAttribute('c_user'));
-
     $MetaList->add('author', $User->getName());
     $author = $User->getName();
 } catch (QUI\Exception $Exception) {
@@ -61,6 +65,9 @@ $MetaList->add('publisher', $Publisher);
 
 // image
 $image = $Site->getAttribute('image_site');
+$imageAbsolutePath = '';
+$host = QUI::getRequest()->getHost();
+$scheme = QUI::getRequest()->getScheme();
 
 if (\strpos($image, 'fa-') !== false) {
     $image = '';
@@ -69,24 +76,28 @@ if (\strpos($image, 'fa-') !== false) {
 if (MediaUtils::isMediaUrl($image)) {
     try {
         $Image = MediaUtils::getImageByUrl($image);
-        $image = $Image->getSizeCacheUrl();
+        // structured data needs absolute urls for images
+        $imageAbsolutePath = $scheme . '://' . $host . $Image->getSizeCacheUrl();
     } catch (QUI\Exception $Exception) {
     }
 }
 
 // use default
-if (empty($image)) {
+if (empty($imageAbsolutePath)) {
     try {
         $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
 
         if ($Placeholder) {
-            $image = $Placeholder->getSizeCacheUrl();
+            // structured data needs absolute urls for images
+            $imageAbsolutePath = $scheme . '://' . $host . $Placeholder->getSizeCacheUrl();
         }
     } catch (QUI\Exception $Exception) {
     }
 }
 
-$MetaList->add('image', $image);
+if (!empty($imageAbsolutePath)) {
+    $MetaList->add('image', $imageAbsolutePath);
+}
 
 // Reverse since the sorting/ordering in previous siblings is reversed
 $previousSiblings = \array_reverse($Site->previousSiblings($amountOfSiblings));
@@ -103,3 +114,10 @@ $Engine->assign([
     'MetaList' => $MetaList,
     'author' => $author
 ]);
+
+// json schema
+try {
+    $Template->extendHeader($MetaList->getJsonLdSchema());
+} catch (\QUI\Exception $e) {
+    QUI\System\Log::addWarning($e->getMessage());
+}
