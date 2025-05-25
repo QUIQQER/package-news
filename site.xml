@@ -11,7 +11,7 @@
             <!-- extra attributes -->
             <attributes>
                 <attribute default="childrenList">quiqqer.settings.news.template</attribute>
-                <attribute default="6">quiqqer.settings.news.max</attribute>
+                <attribute default="10">quiqqer.settings.news.max</attribute>
                 <attribute default="1">quiqqer.settings.news.showImages</attribute>
                 <attribute default="1">quiqqer.settings.news.showHeader</attribute>
                 <attribute default="1">quiqqer.settings.news.showShort</attribute>
