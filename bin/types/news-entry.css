@@ -1,29 +1,7 @@
 @CHARSET "UTF-8";
 
-.news-entry {
-    float: left;
-    width: 100%;
-}
-
-.news-entry-next,
-.news-entry-prev {
-    padding: 10px 20px;
-    float: left;
-}
-
-.news-entry-next {
-    float: right;
-}
-
 .news-entry-date-and-author {
-    margin-bottom: 20px;
-}
-
-.news-entry aside {
-    clear: both;
-    float: left;
-    width: 100%;
-    margin-top: 30px;
+    margin-bottom: 1rem;
 }
 
 .news-entry-time {
@@ -37,7 +15,7 @@
 }
 
 .news-entry-nav-title {
-    margin-bottom: 5px;
+    margin-bottom: o.25rem;
 }
 
 .news-entry-nav-list {

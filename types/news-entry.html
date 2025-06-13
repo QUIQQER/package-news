@@ -4,13 +4,13 @@
 {assign var=date value=$Site->getAttribute('c_date')}
 {/if}
 
-<article class="news-entry quiqqer-news-entry grid-100 mobile-grid-100 grid-parent content-body"
+<article class="news-entry quiqqer-news-entry content-body"
          itemscope itemtype="http://schema.org/NewsArticle"
 >
     {$MetaList->create()}
 
     {if $enableDateAndCreator}
-    <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
+    <section class="news-entry-date-and-author">
         {if $author && $showCreator}
             {t}quiqqer/news entry.news.by{/t}
             <span class="news-entry-author">{$author}</span>
@@ -28,7 +28,7 @@
     {/if}
 
     {if $Site->getAttribute('content')}
-    <section class="news-entry-content grid-100 mobile-grid-100 grid-parent" itemprop="articleBody">
+    <section class="news-entry-content default-content" itemprop="articleBody">
         {$Site->getAttribute('content')}
     </section>
     {/if}
