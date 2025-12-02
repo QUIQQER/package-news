@@ -125,7 +125,12 @@
 
             <!-- extra attributes -->
             <attributes>
-                <attribute default="1">quiqqer.settings.news.entry.dateAndCreator</attribute>
+                <attribute>quiqqer.settings.news.entry.dateAndCreator</attribute>
+                <attribute>quiqqer.settings.news.entry.hideMore</attribute>
+                <attribute>quiqqer.settings.news.guestAuthor.enable</attribute>
+                <attribute>quiqqer.settings.news.guestAuthor.quiqqerUser</attribute>
+                <attribute>quiqqer.settings.news.guestAuthor.name</attribute>
+                <attribute>quiqqer.settings.news.guestAuthor.avatar</attribute>
             </attributes>
 
             <!-- entry settings -->
@@ -142,7 +147,11 @@
                                 <locale group="quiqqer/news"
                                         var="quiqqer.settings.news.entry.dateAndCreator" />
                             </text>
-
+                            <option value=""></option>
+                            <option value="default">
+                                <locale group="quiqqer/news"
+                                        var="quiqqer.settings.news.entry.dateAndCreator.default"/>
+                            </option>
                             <option value="showAll">
                                 <locale group="quiqqer/news"
                                         var="quiqqer.settings.news.entry.dateAndCreator.showAll"/>
@@ -160,6 +169,45 @@
                                         var="quiqqer.settings.news.entry.dateAndCreator.hide"/>
                             </option>
                         </select>
+
+                    </settings>
+                </category>
+
+                <category name="site.settings.entry.news.guestAuthor">
+                    <settings>
+                        <title>
+                            <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.title" />
+                        </title>
+
+                        <input conf="quiqqer.settings.news.guestAuthor.enable" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.enable" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.enable.description" />
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.guestAuthor.quiqqerUser" type="text" data-qui="controls/users/Input" data-qui-options-max="1">
+                            <text>
+                                <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.quiqqerUser" />
+                            </text>
+                            <description>
+                                <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.quiqqerUser.description" />
+                            </description>
+                        </input>
+
+                        <input conf="quiqqer.settings.news.guestAuthor.name" type="text">
+                            <text>
+                                <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.name" />
+                            </text>
+                        </input>
+                        <!-- todo @michael.daniel -->
+                        <!--                        <input conf="quiqqer.settings.news.guestAuthor.avatar" type="text" class="media-image">-->
+                        <!--                            <text>-->
+                        <!--                                <locale group="quiqqer/news" var="site.settings.entry.guestAuthor.avatar" />-->
+                        <!--                            </text>-->
+                        <!--                        </input>-->
 
                     </settings>
                 </category>
