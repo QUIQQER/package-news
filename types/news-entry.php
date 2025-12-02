@@ -11,7 +11,6 @@
 use QUI\Projects\Media\Image;
 use QUI\Projects\Media\Utils as MediaUtils;
 
-
 $a = $Project->getConfig('news.settings.entry.showTitle');
 // default
 $enableDateAndCreator = true;
@@ -137,7 +136,7 @@ if (empty($imageAbsolutePath)) {
     try {
         $Placeholder = $Site->getProject()->getMedia()->getPlaceholderImage();
 
-        if ($Placeholder) {
+        if ($Placeholder instanceof Image) {
             // structured data needs absolute urls for images
             $imageAbsolutePath = $scheme . '://' . $host . $Placeholder->getSizeCacheUrl();
         }
