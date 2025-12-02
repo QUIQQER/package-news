@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quiqqer>
+    <project>
     <settings>
-        <config name="plugins/quiqqer/news">
-            <section name="further_news">
+        <config>
+            <section name="news.settings.general">
                 <conf name="amount">
                     <type><![CDATA[int]]></type>
                     <defaultvalue>2</defaultvalue>
@@ -15,48 +16,114 @@
 
                 <conf name="show_time">
                     <type><![CDATA[boolean]]></type>
+                    <defaultvalue>0</defaultvalue>
+                </conf>
+            </section>
+
+            <section name="news.settings.entry">
+                <conf name="showCreator">
+                    <type><![CDATA[boolean]]></type>
+                </conf>
+                <conf name="showDate">
+                    <type><![CDATA[boolean]]></type>
                     <defaultvalue>1</defaultvalue>
+                </conf>
+                <conf name="showTitle">
+                    <type><![CDATA[boolean]]></type>
+                </conf>
+                <conf name="showDescription">
+                    <type><![CDATA[boolean]]></type>
+                </conf>
+            </section>
+
+            <section name="news.settings.entry.more">
+                <conf name="amount">
+                    <type><![CDATA[int]]></type>
+                    <defaultvalue>2</defaultvalue>
+                </conf>
+                <conf name="show_creator">
+                    <type><![CDATA[boolean]]></type>
+                </conf>
+                <conf name="show_date">
+                    <type><![CDATA[boolean]]></type>
+                    <defaultvalue>1</defaultvalue>
+                </conf>
+                <conf name="show_time">
+                    <type><![CDATA[boolean]]></type>
                 </conf>
             </section>
         </config>
 
-        <window name="quiqqer-news-settings">
-            <title>
-                <locale group="quiqqer/news" var="settings.title"/>
-            </title>
-            <params>
-                <icon>fa fa-newspaper-o</icon>
-            </params>
-
+        <window>
             <categories>
-                <category name="news-entry" index="1">
+                <category name="news.entry">
                     <text>
-                        <locale group="quiqqer/news" var="settings.entry.text"/>
+                        <locale group="quiqqer/news" var="news.settings.title"/>
                     </text>
-                    <icon>fa fa-file-text</icon>
+                    <icon>fa fa-newspaper-o</icon>
 
-                    <settings name="news-entry">
+                    <settings name="news.settings.entry">
                         <title>
-                            <locale group="quiqqer/news" var="settings.further_news.title"/>
-                        </title>
-                        <input conf="further_news.amount" type="number">
                             <text>
-                                <locale group="quiqqer/news" var="settings.further_news.amount.text"/>
+                                <locale group="quiqqer/news" var="news.settings.entry.title"/>
+                            </text>
+                        </title>
+
+                        <input conf="news.settings.entry.showCreator" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entry.showCreator.text"/>
+                            </text>
+                        </input>
+                        <input conf="news.settings.entry.showDate" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entry.showDate.text"/>
+                            </text>
+                        </input>
+                        <input conf="news.settings.entry.showTitle" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entry.showTitle.text"/>
+                            </text>
+                        </input>
+
+                        <input conf="news.settings.entry.showDescription" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entry.showDescription.text"/>
+                            </text>
+                        </input>
+                    </settings>
+
+                    <!-- more entries -->
+                    <settings title="news.settings.entries.more" name="news.settings.entries.more">
+                        <title>
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entries.more.title"/>
+                            </text>
+                        </title>
+
+                        <input conf="news.settings.entries.more.amount" type="number">
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entries.more.amount.text"/>
                             </text>
                             <description>
-                                <locale group="quiqqer/news" var="settings.further_news.amount.description"/>
+                                <locale group="quiqqer/news" var="news.settings.entries.more.amount.description"/>
                             </description>
                         </input>
 
-                        <input conf="further_news.show_date" type="checkbox">
+                        <input conf="news.settings.entries.more.show_creator" type="checkbox">
                             <text>
-                                <locale group="quiqqer/news" var="settings.further_news.show_date.text"/>
+                                <locale group="quiqqer/news" var="news.settings.entries.more.show_creator.text"/>
                             </text>
                         </input>
 
-                        <input conf="further_news.show_time" type="checkbox">
+                        <input conf="news.settings.entries.more.show_date" type="checkbox">
                             <text>
-                                <locale group="quiqqer/news" var="settings.further_news.show_time.text"/>
+                                <locale group="quiqqer/news" var="news.settings.entries.more.show_date.text"/>
+                            </text>
+                        </input>
+
+                        <input conf="news.settings.entries.more.show_time" type="checkbox">
+                            <text>
+                                <locale group="quiqqer/news" var="news.settings.entries.more.show_time.text"/>
                             </text>
                         </input>
                     </settings>
@@ -64,4 +131,5 @@
             </categories>
         </window>
     </settings>
+    </project>
 </quiqqer>

@@ -1,96 +1,130 @@
-{if $Site->getAttribute('release_from') && $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
-{assign var=date value=$Site->getAttribute('release_from')}
+{if $Site->getAttribute('release_from') &&
+    $Site->getAttribute('release_from') != '0000-00-00 00:00:00'}
+    {assign var=date value=$Site->getAttribute('release_from')}
 {else}
-{assign var=date value=$Site->getAttribute('c_date')}
+    {assign var=date value=$Site->getAttribute('c_date')}
 {/if}
 
-<article class="news-entry quiqqer-news-entry grid-100 mobile-grid-100 grid-parent content-body"
-         itemscope itemtype="http://schema.org/NewsArticle"
+<article class="quiqqer-news-entry quiqqer-news-entry content-body"
+         itemscope itemtype="https://schema.org/NewsArticle"
 >
     {$MetaList->create()}
 
+    {if $showTitle and $Site->getAttribute('title')}
+        <h1 class="quiqqer-news-entry__title">{$Site->getAttribute('title')}</h1>
+    {/if}
+
     {if $enableDateAndCreator}
-    <section class="news-entry-date-and-author grid-100 mobile-grid-100 grid-parent">
+    <section class="quiqqer-news-entry__meta">
         {if $author && $showCreator}
             {t}quiqqer/news entry.news.by{/t}
-            <span class="news-entry-author">{$author}</span>
+            <span class="quiqqer-news-entry__author"  itemprop="author">{$author}</span>
         {/if}
 
         {if $showDate}
-        <span class="news-entry-time">
-                {t}quiqqer/news entry.news.on{/t}
-                <time datetime="{$date|date_format:'c'}">
-                    {locale_date date=$date}
-                </time>
-            </span>
+            <span class="quiqqer-news-entry__date">
+            {t}quiqqer/news entry.news.on{/t}
+            <time datetime="{$date|date_format:'c'}">
+                {locale_date date=$date}
+            </time>
+        </span>
         {/if}
     </section>
     {/if}
 
+    {if $showDescription and $Site->getAttribute('short')}
+        <p class="quiqqer-news-entry__short text-lead">{$Site->getAttribute('short')}</p>
+    {/if}
+
     {if $Site->getAttribute('content')}
-    <section class="news-entry-content grid-100 mobile-grid-100 grid-parent" itemprop="articleBody">
+    <section class="quiqqer-news-entry__content" itemprop="articleBody">
         {$Site->getAttribute('content')}
     </section>
     {/if}
 
-    <hr/>
+    {if !$Site->getAttribute('quiqqer.settings.news.entry.hideMore')}
+        <hr/>
 
-    <section class="news-entry-nav">
-        <div class="news-entry-nav-title">
-            {t}quiqqer/news entry.news.nav.title{/t}
-        </div>
-        <ol class="news-entry-nav-list">
-            {foreach from=$previousSiblings item=prevSibling}
-            <li>
-                <a href="{url site=$prevSibling}"
-                   title="{$prevSibling->getAttribute('title')|escape:'html'}"
-                >
-                    <i class="fa fa-angle-right news-entry-nav-bullet"></i>
+        <aside class="quiqqer-news-entry__more">
+            <p class="quiqqer-news-entry__more-heading">
+                {t}quiqqer/news entry.news.nav.title{/t}
+            </p>
+            <ol class="quiqqer-news-entry__more-list">
+                {foreach from=$previousSiblings item=Child}
+                    <li class="quiqqer-news-entry__more-item">
+                        <a href="{url site=$Child}"
+                           title="{$Child->getAttribute('title')|escape:'html'}"
+                           class="quiqqer-news-entry__more-link link link-primary"
+                        >
+                            <span class="fa-solid fa-angle-right icon" aria-hidden="true"></span>
+
+                            {if $showFurtherNewsDate}
+                                <span class="quiqqer-news-entry__more-date">
+                                {locale_date date=$Child->getAttribute('release_from')} –
+                                </span>
+                            {/if}
+
+                            {if $showFurtherNewsTime}
+                                <span class="quiqqer-news-entry__more-time">
+                                {$Child->getAttribute('release_from')|date_format:"H:i"}:
+                                </span>
+                            {/if}
+
+                            <span class="quiqqer-news-entry__more-title">
+                            {$Child->getAttribute('title')}
+                            </span>
+                        </a>
+                    </li>
+                {/foreach}
+
+                <li class="quiqqer-news-entry__more-item quiqqer-news-entry__more-item--active">
+                    <span class="fa-solid fa-angle-right icon" aria-hidden="true"></span>
+
                     {if $showFurtherNewsDate}
-                    {locale_date date=$prevSibling->getAttribute('release_from')} –
+                        <span class="quiqqer-news-entry__more-date">
+                        {locale_date date=$Site->getAttribute('release_from')} –
+                        </span>
                     {/if}
 
                     {if $showFurtherNewsTime}
-                    {$prevSibling->getAttribute('release_from')|date_format:"H:i"}:
+                        <span class="quiqqer-news-entry__more-time">
+                        {$Site->getAttribute('release_from')|date_format:"H:i"}:
+                        </span>
                     {/if}
 
-                    {$prevSibling->getAttribute('title')}
-                </a>
-            </li>
-            {/foreach}
+                    <span class="quiqqer-news-entry__more-title">
+                        {$Site->getAttribute('title')}
+                    </span>
+                </li>
 
-            <li class="news-entry-nav-active">
-                <i class="fa fa-angle-right news-entry-nav-bullet"></i>
-                {if $showFurtherNewsDate}
-                {locale_date date=$Site->getAttribute('release_from')} –
-                {/if}
+                {foreach from=$nextSiblings item=Child}
+                    <li class="quiqqer-news-entry__more-item">
+                        <a href="{url site=$Child}"
+                           title="{$Child->getAttribute('title')|escape:'html'}"
+                           class="quiqqer-news-entry__more-link link link-primary"
+                        >
+                            <span class="fa-solid fa-angle-right icon" aria-hidden="true"></span>
 
-                {if $showFurtherNewsTime}
-                {$Site->getAttribute('release_from')|date_format:"H:i"}:
-                {/if}
+                            {if $showFurtherNewsDate}
+                                <span class="quiqqer-news-entry__more-date">
+                                {locale_date date=$Child->getAttribute('release_from')} –
+                                </span>
+                            {/if}
 
-                {$Site->getAttribute('title')}
-            </li>
+                            {if $showFurtherNewsTime}
+                                <span class="quiqqer-news-entry__more-time">
+                                {$Child->getAttribute('release_from')|date_format:"H:i"}:
+                                </span>
+                            {/if}
 
-            {foreach from=$nextSiblings item=nextSibling}
-            <li>
-                <a href="{url site=$nextSibling}"
-                   title="{$nextSibling->getAttribute('title')|escape:'html'}"
-                >
-                    <i class="fa fa-angle-right news-entry-nav-bullet"></i>
-                    {if $showFurtherNewsDate}
-                    {locale_date date=$nextSibling->getAttribute('release_from')} –
-                    {/if}
-
-                    {if $showFurtherNewsTime}
-                    {$nextSibling->getAttribute('release_from')|date_format:"H:i"}:
-                    {/if}
-
-                    {$nextSibling->getAttribute('title')}
-                </a>
-            </li>
-            {/foreach}
-        </ol>
-    </section>
+                            <span class="quiqqer-news-entry__more-title">
+                            {$Child->getAttribute('title')}
+                            </span>
+                        </a>
+                    </li>
+                {/foreach}
+            </ol>
+        </aside>
+    {/if}
 
 </article>
